@@ -3,9 +3,7 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
-[Aa]ssets/Plugins/Editor/ScriptInspector3/
 Assets/AssetStoreTools*
-*.meta
 
 # Visual Studio cache directory
 .vs/
