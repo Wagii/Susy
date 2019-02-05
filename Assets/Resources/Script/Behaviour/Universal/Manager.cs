@@ -58,11 +58,11 @@ public class Manager : MonoBehaviour {
 			rightMovementHand = Instantiate(handPrefab, Vector3.zero, Quaternion.identity, player.transform);
 		}
 		if (this.objectParameter.reverse) {
-			leftObjectHand = Instantiate(reverseHandPrefab, Vector3.zero, Quaternion.identity, player.transform);
-			rightObjectHand = Instantiate(reverseHandPrefab, Vector3.zero, Quaternion.identity, player.transform);
+			leftObjectHand = Instantiate(reverseHandPrefab, Vector3.zero, Quaternion.identity, null);
+			rightObjectHand = Instantiate(reverseHandPrefab, Vector3.zero, Quaternion.identity, null);
 		} else {
-			leftObjectHand = Instantiate(handPrefab, Vector3.zero, Quaternion.identity, player.transform);
-			rightObjectHand = Instantiate(handPrefab, Vector3.zero, Quaternion.identity, player.transform);
+			leftObjectHand = Instantiate(handPrefab, Vector3.zero, Quaternion.identity, null);
+			rightObjectHand = Instantiate(handPrefab, Vector3.zero, Quaternion.identity, null);
 		}
 		SteamVR_ControllerManager controllerManager = player.GetComponent<SteamVR_ControllerManager>();
 		Handler.CreateHand(leftMovementHand, controllerManager.left.transform, movementParameters.reverse);
