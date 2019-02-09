@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Aurelien\Susy\Susy" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Susy.sln" t="IncludeFlat" />
+    </e>
+    <e p="C:\Users\THE GREAT IMPERATOR\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\THE GREAT IMPERATOR\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Susy.-720442664.00" t="ExcludeRecursive" />
+    <e p="C:\Users\THE GREAT IMPERATOR\Susy\Susy\Library" t="ExcludeRecursive" />
+    <e p="C:\Users\THE GREAT IMPERATOR\Susy\Susy\Temp" t="ExcludeRecursive" />
+  </component>
+</project>
