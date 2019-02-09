@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{e1846ee9-f3ae-4321-90c9-c4ced39ccad1}">
+        <property name="name">
+            <value>force_throw</value>
+        </property>
+        <relationship name="folder">
+            <destination>{5efc9c0b-f891-4341-b30a-6b3a0fa5f383}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{a001a550-dcf8-497d-b677-d8ccde15ef5a}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{a001a550-dcf8-497d-b677-d8ccde15ef5a}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>
