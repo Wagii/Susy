@@ -4,6 +4,7 @@
 [Bb]uild/
 [Bb]uilds/
 [Pp]lugins/Editor/
+[Pp]lugins/Editor/ScriptInspector3/
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory
