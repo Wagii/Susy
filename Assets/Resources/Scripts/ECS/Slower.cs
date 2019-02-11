@@ -4,20 +4,15 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(GameObjectEntity))]
 public class Slower : MonoBehaviour {
-
+	public float localSlowMultiplier;
+	public float localSlowAddition;
+	
 }
 
 class EntitySlow : ComponentSystem {
 	struct Components {
 		public Rigidbody rb;
 		public Slower sl;
-	}
-	
-	protected override void OnUpdate() {
-		struct Components {
-			public Rigidbody rb;
-			public ThrowObject to;
-		}
 	}
 	
 	private bool TestSleep(float magnitude, float angularMagnitude) {
@@ -31,7 +26,8 @@ class EntitySlow : ComponentSystem {
 		foreach (Components item in GetEntities<Components>()) {
 			if (item.rb.IsSleeping() == true) continue;
 			if (item.rb.isKinematic == true) continue;
-			item.rb.velocity -= item.rb.velocity * Time.deltaTime/* * Manager.slowParameters.slowSpeed*/;
+			//item.rb.velocity -= item.rb.velocity * Time.deltaTime/* * Manager.slowParameters.slowSpeed*/;
+			item.rb.velocity -= item.rb.velocity.normalized * Time.deltaTime /** Manager.slowParameters.slowSpeed * item.sl.localSlowMultiplier + item.sl.localSlowAddition*/;
 			if (TestSleep(item.rb.velocity.magnitude, item.rb.angularVelocity.magnitude)) {
 				item.rb.velocity = Vector3.zero;
 				item.rb.angularVelocity = Vector3.zero;
