@@ -55,6 +55,8 @@ namespace Valve.VR
         
         private static SteamVR_Action_Boolean p_susy_Throw;
         
+        private static SteamVR_Action_Pose p_susy_Position;
+        
         private static SteamVR_Action_Vibration p_susy_FeedBack;
         
         public static SteamVR_Action_Boolean default_InteractUI
@@ -209,6 +211,14 @@ namespace Valve.VR
             }
         }
         
+        public static SteamVR_Action_Pose susy_Position
+        {
+            get
+            {
+                return SteamVR_Actions.p_susy_Position.GetCopy<SteamVR_Action_Pose>();
+            }
+        }
+        
         public static SteamVR_Action_Vibration susy_FeedBack
         {
             get
@@ -239,6 +249,7 @@ namespace Valve.VR
                     SteamVR_Actions.mixedreality_ExternalCamera,
                     SteamVR_Actions.susy_Move,
                     SteamVR_Actions.susy_Throw,
+                    SteamVR_Actions.susy_Position,
                     SteamVR_Actions.susy_FeedBack};
             Valve.VR.SteamVR_Input.actionsIn = new Valve.VR.ISteamVR_Action_In[] {
                     SteamVR_Actions.default_InteractUI,
@@ -258,7 +269,8 @@ namespace Valve.VR
                     SteamVR_Actions.buggy_Reset,
                     SteamVR_Actions.mixedreality_ExternalCamera,
                     SteamVR_Actions.susy_Move,
-                    SteamVR_Actions.susy_Throw};
+                    SteamVR_Actions.susy_Throw,
+                    SteamVR_Actions.susy_Position};
             Valve.VR.SteamVR_Input.actionsOut = new Valve.VR.ISteamVR_Action_Out[] {
                     SteamVR_Actions.default_Haptic,
                     SteamVR_Actions.susy_FeedBack};
@@ -267,7 +279,8 @@ namespace Valve.VR
                     SteamVR_Actions.susy_FeedBack};
             Valve.VR.SteamVR_Input.actionsPose = new Valve.VR.SteamVR_Action_Pose[] {
                     SteamVR_Actions.default_Pose,
-                    SteamVR_Actions.mixedreality_ExternalCamera};
+                    SteamVR_Actions.mixedreality_ExternalCamera,
+                    SteamVR_Actions.susy_Position};
             Valve.VR.SteamVR_Input.actionsBoolean = new Valve.VR.SteamVR_Action_Boolean[] {
                     SteamVR_Actions.default_InteractUI,
                     SteamVR_Actions.default_Teleport,
@@ -327,6 +340,7 @@ namespace Valve.VR
             SteamVR_Actions.p_mixedreality_ExternalCamera = ((SteamVR_Action_Pose)(SteamVR_Action.Create<SteamVR_Action_Pose>("/actions/mixedreality/in/ExternalCamera")));
             SteamVR_Actions.p_susy_Move = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/Susy/in/Move")));
             SteamVR_Actions.p_susy_Throw = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/Susy/in/Throw")));
+            SteamVR_Actions.p_susy_Position = ((SteamVR_Action_Pose)(SteamVR_Action.Create<SteamVR_Action_Pose>("/actions/Susy/in/Position")));
             SteamVR_Actions.p_susy_FeedBack = ((SteamVR_Action_Vibration)(SteamVR_Action.Create<SteamVR_Action_Vibration>("/actions/Susy/out/FeedBack")));
         }
     }

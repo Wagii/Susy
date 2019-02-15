@@ -33,6 +33,14 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Pose Position
+        {
+            get
+            {
+                return SteamVR_Actions.susy_Position;
+            }
+        }
+        
         public virtual SteamVR_Action_Vibration FeedBack
         {
             get
