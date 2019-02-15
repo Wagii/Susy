@@ -24,7 +24,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="650e6471-498c-42f1-a38e-c16e840f127a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/ECS/Slower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/ECS/Slower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Susy/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Susy/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Susy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Susy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Untitled.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Untitled.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Extras/SteamVR_ForceSteamVRMode.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Extras/SteamVR_ForceSteamVRMode.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Core/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Core/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Longbow/Prefabs/Arrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Longbow/Prefabs/Arrow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Poses/CubePose small.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Poses/CubePose small.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Poses/HappyBallPose.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Poses/HappyBallPose.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Poses/HappyBallPoseSqueezed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Poses/HappyBallPoseSqueezed.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Samples/JoeJeff/Materials/PController.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Samples/JoeJeff/Materials/PController.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Samples/Prefabs/Buggy Controller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Samples/Prefabs/Buggy Controller.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Samples/Prefabs/JoeJeffController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Samples/Prefabs/JoeJeffController.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Teleport/Prefabs/Teleporting.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Teleport/Prefabs/Teleporting.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/[CameraRig].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/[CameraRig].prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_glove_left.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_glove_left.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_glove_left_model_slim.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_glove_left_model_slim.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_glove_right.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_glove_right.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_glove_right_model_slim.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_glove_right_model_slim.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_hand_alien_left.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_hand_alien_left.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_hand_alien_right.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_hand_alien_right.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_hand_floppy_left.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_hand_floppy_left.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_hand_floppy_right.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_hand_floppy_right.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Resources/SteamVR_Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Resources/SteamVR_Settings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR_Input/ActionSetClasses/SteamVR_Input_ActionSet_Susy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR_Input/ActionSetClasses/SteamVR_Input_ActionSet_Susy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SteamVR_Input/SteamVR_Input_Actions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR_Input/SteamVR_Input_Actions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions.json" beforeDir="false" afterPath="$PROJECT_DIR$/actions.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,20 +62,64 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@0.0.12-preview.23/Unity.Entities.PerformanceTests/Unity.Entities.PerformanceTests.asmdef">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
+            <state relative-caret-position="30">
               <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-              <folding>
-                <marker date="1549723852102" expanded="true" signature="67:342" ph="[...]" />
-                <marker date="1549723852102" expanded="true" signature="375:407" ph="[...]" />
-                <marker date="1549723852102" expanded="true" signature="433:457" ph="[...]" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Temp/Compiled-Outlined-Silhouetted Diffuse.shader">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Assets/Player_Movement.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+              <folding>
+                <marker date="1550196091255" expanded="true" signature="6:125" ph="..." />
+                <marker date="1550196091255" expanded="true" signature="171:847" ph="{...}" />
+                <marker date="1550196091255" expanded="true" signature="303:357" ph="{...}" />
+                <marker date="1550196091255" expanded="true" signature="457:501" ph="{...}" />
+                <marker date="1550196091255" expanded="true" signature="603:845" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/SteamVR/Input/SteamVR_Behaviour_Boolean.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
+              <folding>
+                <marker date="1548876907000" expanded="false" signature="6:212" ph="..." />
+                <marker date="1548876907000" expanded="true" signature="232:8261" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="239:580" ph="/// This component simplifies using boolean actions.  ... " />
+                <marker date="1548876907000" expanded="true" signature="639:8259" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="3039:3253" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="3088:3215" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="3297:3347" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="3385:3846" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="3887:4436" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="3937:4426" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="4563:4831" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="4608:4695" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="4736:4821" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="4960:5235" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="5007:5095" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="5138:5225" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="5360:5619" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="5403:5487" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="5526:5609" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="5760:6037" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="5804:5893" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="5933:6027" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="6178:6455" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="6222:6311" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="6351:6445" ph="{...}" />
+                <marker date="1548876907000" expanded="true" signature="6465:7247" ph="/// Gets the localized name of the device that the action corresponds to.  ... " />
+                <marker date="1548876907000" expanded="true" signature="7330:7504" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -60,12 +129,15 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@0.0.12-preview.23/Unity.Entities.PerformanceTests/Unity.Entities.PerformanceTests.asmdef" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Temp/Compiled-Outlined-Silhouetted Diffuse.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SteamVR/Input/SteamVR_Behaviour_Boolean.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Player_Movement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.entities@0.0.12-preview.23/Unity.Entities.PerformanceTests/Unity.Entities.PerformanceTests.asmdef" />
+        <option value="$PROJECT_DIR$/Assets/justprintthings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Player_Movement.cs" />
       </list>
     </option>
   </component>
@@ -81,15 +153,15 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
-      <pane id="AssemblyExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -117,10 +189,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="16344">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="16344" />
       <method v="2" />
     </configuration>
   </component>
@@ -136,11 +208,13 @@
       <updated>1549723480719</updated>
       <workItem from="1549723500027" duration="439000" />
       <workItem from="1549885752114" duration="376000" />
+      <workItem from="1550194341581" duration="56000" />
+      <workItem from="1550194701546" duration="1433000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="815000" />
+    <option name="totallyTimeSpent" value="2304000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -154,7 +228,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -162,7 +236,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -201,23 +275,71 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/Slower.cs" />
+    <entry file="file://$PROJECT_DIR$/Temp/Compiled-Outlined-Silhouetted Diffuse.shader" />
     <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@0.0.12-preview.23/Unity.Entities.PerformanceTests/Unity.Entities.PerformanceTests.asmdef">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
+        <state relative-caret-position="30">
           <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/justprintthings.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/SteamVR/Input/SteamVR_Behaviour_Boolean.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
           <folding>
-            <marker date="1549723852102" expanded="true" signature="67:342" ph="[...]" />
-            <marker date="1549723852102" expanded="true" signature="375:407" ph="[...]" />
-            <marker date="1549723852102" expanded="true" signature="433:457" ph="[...]" />
+            <marker date="1548876907000" expanded="false" signature="6:212" ph="..." />
+            <marker date="1548876907000" expanded="true" signature="232:8261" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="239:580" ph="/// This component simplifies using boolean actions.  ... " />
+            <marker date="1548876907000" expanded="true" signature="639:8259" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="3039:3253" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="3088:3215" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="3297:3347" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="3385:3846" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="3887:4436" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="3937:4426" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="4563:4831" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="4608:4695" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="4736:4821" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="4960:5235" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="5007:5095" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="5138:5225" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="5360:5619" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="5403:5487" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="5526:5609" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="5760:6037" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="5804:5893" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="5933:6027" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="6178:6455" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="6222:6311" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="6351:6445" ph="{...}" />
+            <marker date="1548876907000" expanded="true" signature="6465:7247" ph="/// Gets the localized name of the device that the action corresponds to.  ... " />
+            <marker date="1548876907000" expanded="true" signature="7330:7504" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Resources/Slower.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Temp/Compiled-Outlined-Silhouetted Diffuse.shader">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/Assets/Player_Movement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+          <folding>
+            <marker date="1550196091255" expanded="true" signature="6:125" ph="..." />
+            <marker date="1550196091255" expanded="true" signature="171:847" ph="{...}" />
+            <marker date="1550196091255" expanded="true" signature="303:357" ph="{...}" />
+            <marker date="1550196091255" expanded="true" signature="457:501" ph="{...}" />
+            <marker date="1550196091255" expanded="true" signature="603:845" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

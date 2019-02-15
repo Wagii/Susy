@@ -84,6 +84,11 @@
       "requirement": "mandatory"
     },
     {
+      "name": "/actions/Susy/in/Position",
+      "type": "pose",
+      "requirement": "mandatory"
+    },
+    {
       "name": "/actions/Susy/out/FeedBack",
       "type": "vibration"
     }
