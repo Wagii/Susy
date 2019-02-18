@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets\Resources\Sounds\fmod.fspro
-  SourceProjectPathUnformatted: Assets\Resources\Sounds\fmod.fspro
-  SourceBankPathUnformatted: Assets\Resources\Sounds\Build
+  sourceProjectPath: D:\ICAN3GD\Susy\Susy_Rebirth\Assets\Resources\Sounds\fmod.fspro
+  SourceProjectPathUnformatted: D:\ICAN3GD\Susy\Susy_Rebirth\Assets\Resources\Sounds\fmod.fspro
+  SourceBankPathUnformatted: D:\ICAN3GD\Susy\Susy_Rebirth\Assets\Resources\Sounds\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -57,7 +57,11 @@ MonoBehaviour:
     Value: 256
   - Platform: 2
     Value: 32
-  Plugins: []
+  Plugins:
+  - gvraudio
   MasterBanks:
+  - Master Bank
+  - Master Bank
+  - Master Bank
   - Master Bank
   Banks: []

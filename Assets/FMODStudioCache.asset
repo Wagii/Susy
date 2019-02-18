@@ -31,6 +31,29 @@ MonoBehaviour:
   - {fileID: 114057779874864496}
   stringsBankWriteTime: 636836820327525570
   cacheVersion: 3
+--- !u!114 &114009719370988540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/coll_objets
+  guid: b8eafde80ba2bd4d9706c902b82d0da5
+  Banks:
+  - {fileID: 114862666907572084}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 114151278459565140}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
 --- !u!114 &114026041540700086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +174,44 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 500
+--- !u!114 &114109531140981886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/ralenti
+  guid: 3131899335d6b64487dc8a0b6c7d7679
+  Banks:
+  - {fileID: 114862666907572084}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114472707724966114}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5854
+--- !u!114 &114111503022386322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: force_joueur
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114142366608660144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,6 +232,43 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 114489097567683236}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3430
+--- !u!114 &114151278459565140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: force_objet
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114179417250817158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/grab
+  guid: 9765619f17e3bd41b9c9a2956b694871
+  Banks:
+  - {fileID: 114862666907572084}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 3430
@@ -204,6 +302,29 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114197249464002604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/propulsion
+  guid: 0e70a74e95a2cd47b217ea27c9ecc10d
+  Banks:
+  - {fileID: 114862666907572084}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 114981305623122874}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3430
 --- !u!114 &114214519723740336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,6 +377,48 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3430
+--- !u!114 &114314776626216444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\ICAN3GD\Susy\Susy_Rebirth\Assets\Resources\Sounds\Build\Desktop\Master
+    Bank.strings.bank
+  lastModified: 636836820327525570
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 980
+  Exists: 1
+--- !u!114 &114326230377571710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/charge
+  guid: f8e218abbb4ea84f984f28ceb8038a53
+  Banks:
+  - {fileID: 114862666907572084}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114835029075242602}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3555
 --- !u!114 &114336239202351490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,6 +438,43 @@ MonoBehaviour:
   - Name: Desktop
     Value: 313088
   Exists: 0
+--- !u!114 &114425013465987344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/throw
+  guid: cfc2d3d0ce331042bb9cd89aef59c72e
+  Banks:
+  - {fileID: 114862666907572084}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &114472707724966114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: volume
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114489097567683236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,6 +553,29 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114642054322897080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/coll_joueur
+  guid: 9a5772aad45b9e4893b032a5fc7aaa56
+  Banks:
+  - {fileID: 114862666907572084}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 114111503022386322}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3430
 --- !u!114 &114644226533708500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,6 +655,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114835029075242602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pitch_charge
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114844283177332010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,6 +693,25 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3430
+--- !u!114 &114862666907572084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\ICAN3GD\Susy\Susy_Rebirth\Assets\Resources\Sounds\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636836820327728976
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 512832
+  Exists: 1
 --- !u!114 &114866646707034834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,3 +769,18 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 500
+--- !u!114 &114981305623122874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: volume_prop
+  Min: 0
+  Max: 1
+  Default: 0
