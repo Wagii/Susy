@@ -9,14 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 880487887509480020}
-  - component: {fileID: 880487887509480023}
+  - component: {fileID: 3770809791307919656}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &880487887509480020
 Transform:
   m_ObjectHideFlags: 0
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &880487887509480023
+--- !u!114 &3770809791307919656
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,8 +40,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 880487887509480022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6136012d28d41654ab18a0b9ec7c76a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 0fbaec838e557984bbf77903b13a3b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  slowParameters: {fileID: 0}
+  slowParameters: {fileID: 11400000, guid: 4f19d6dad4ec76643a8f3f89f63f0534, type: 2}
+  playerMovementParameters: {fileID: 11400000, guid: dedc5b3f67b2b624d8462eca2b52885f,
+    type: 2}
