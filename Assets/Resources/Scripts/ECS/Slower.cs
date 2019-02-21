@@ -40,12 +40,10 @@ class EntitySlow : ComponentSystem {
 			if (item.rb.isKinematic == true) continue;
 			item.rb.velocity -= item.rb.velocity.normalized * item.sl.slowSpeed * item.sl.slowMultiplier + item.sl.slowAddition;
 			item.rb.angularVelocity -= item.rb.angularVelocity.normalized * item.sl.slowAngular * item.sl.slowMultiplier + item.sl.slowAddition;
-			if (TestSleep(item.rb.velocity.magnitude, item.rb.angularVelocity.magnitude)) {
-				item.rb.velocity = Vector3.zero;
-				item.rb.angularVelocity = Vector3.zero;
+			
+			if (TestSleep(item.rb.velocity.magnitude, item.rb.angularVelocity.magnitude))
 				item.rb.Sleep();
-			}
 		}
 	}
-    // I hope he's gone...
+	// I think he's gone...
 }

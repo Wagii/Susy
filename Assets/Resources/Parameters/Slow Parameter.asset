@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c85716a8bf50c1046a709a1f269b4bc2, type: 3}
   m_Name: Slow Parameter
   m_EditorClassIdentifier: 
-  slowSpeed: 1
+  slowSpeed: 5
   angularSlowSpeed: 1

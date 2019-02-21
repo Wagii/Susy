@@ -104,18 +104,7 @@ MonoBehaviour:
   onTransformUpdated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5135084653182006559}
-        m_MethodName: UpdatePosition
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1380532589105604368}
+      - m_Target: {fileID: 3916237348418360148}
         m_MethodName: UpdatePosition
         m_Mode: 0
         m_Arguments:
@@ -302,6 +291,7 @@ GameObject:
   - component: {fileID: 235732964}
   - component: {fileID: 5095617925001385271}
   - component: {fileID: 93795185294903417}
+  - component: {fileID: 1100668904274817220}
   m_Layer: 0
   m_Name: '[CameraRig]'
   m_TagString: Untagged
@@ -393,14 +383,14 @@ MonoBehaviour:
   size: 0
   color: {r: 0, g: 1, b: 1, a: 1}
   vertices:
-  - {x: 0.5, y: 0.01, z: -0.5}
-  - {x: -0.5, y: 0.01, z: -0.5}
-  - {x: -0.5, y: 0.01, z: 0.5}
-  - {x: 0.5, y: 0.01, z: 0.5}
-  - {x: 0.65, y: 0.01, z: -0.65}
-  - {x: -0.65, y: 0.01, z: -0.65}
-  - {x: -0.65, y: 0.01, z: 0.65}
-  - {x: 0.65, y: 0.01, z: 0.65}
+  - {x: 2, y: 0.01, z: -1.5}
+  - {x: -2, y: 0.01, z: -1.5}
+  - {x: -2, y: 0.01, z: 1.5}
+  - {x: 2, y: 0.01, z: 1.5}
+  - {x: 2.15, y: 0.01, z: -1.65}
+  - {x: -2.15, y: 0.01, z: -1.65}
+  - {x: -2.15, y: 0.01, z: 1.65}
+  - {x: 2.15, y: 0.01, z: 1.65}
 --- !u!54 &235732964
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -443,6 +433,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localSlowMultiplier: 1
   localSlowAddition: 0
+--- !u!114 &1100668904274817220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235732962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f85ff62a1bbed34b8b1271afbaad70a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 235732964}
 --- !u!1 &235732963
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,17 +501,6 @@ MonoBehaviour:
   onTransformUpdated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8102781339968987481}
-        m_MethodName: UpdatePosition
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 3916237348418360148}
         m_MethodName: UpdatePosition
         m_Mode: 0
@@ -703,8 +695,8 @@ GameObject:
   - component: {fileID: 794845301}
   - component: {fileID: 794845302}
   - component: {fileID: 6339128489683283074}
-  - component: {fileID: 4161248606196726179}
   - component: {fileID: 441969291041523568}
+  - component: {fileID: 3260901511902792743}
   - component: {fileID: 7536570467840098025}
   m_Layer: 0
   m_Name: Camera
@@ -782,20 +774,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.09
   m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &4161248606196726179
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 794845300}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.1
-  m_Height: 0
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &441969291041523568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -834,6 +812,19 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   sizeGrowthRate: 0.1
+--- !u!135 &3260901511902792743
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794845300}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7536570467840098025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -846,7 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55155f0922e8cfb429fe60da1838e3a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider: {fileID: 6339128489683283074}
+  collider: {fileID: 3260901511902792743}
   sizeCurve:
     serializedVersion: 2
     m_Curve:

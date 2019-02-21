@@ -14,11 +14,15 @@ public class PlayerMovements : MonoBehaviour
             this.GetComponent<SteamVR_Behaviour_Pose>().origin = Manager.player.transform;
     }
 
-    // Update Position Value at runtime, position is Local
-    public void UpdatePosition(SteamVR_Behaviour_Pose pos, SteamVR_Input_Sources sources)
-    {
-        this.position = pos.poseAction.localPosition;
-    }
+    //// Update Position Value at runtime, position is Local
+    //public void UpdatePosition(SteamVR_Behaviour_Pose pos, SteamVR_Input_Sources sources)
+    //{
+	//    this.position = transform.localPosition;
+    //}
+    
+	protected void Update() {
+		this.position = transform.localPosition;
+	}
 
     // Save press position on input press, position is Local
     public void Press(SteamVR_Behaviour_Boolean pressType, SteamVR_Input_Sources sources, bool press)
@@ -52,13 +56,8 @@ public class PlayerMovements : MonoBehaviour
                         (Manager.parameters.playerMovementParameters.add ? Manager.player.velocity : Vector3.zero)
 
                         // Now adding the newVector
-	        			+ dir * mag * Manager.parameters.playerMovementParameters.playerSpeedMultiplier
+	        			+ dir * mag * Manager.parameters.playerMovementParameters.playerSpeedMultiplier;
 	        
-	        			// Multiplied by the Levy Value
-	        			+ dir * (Manager.parameters.playerMovementParameters.add ? 
-	        					(Vector3.Angle(Manager.player.velocity, dir)/180 
-	        						* Manager.parameters.playerMovementParameters.angleForce)
-	        					: 1);
 
         // Reset value, cuz it's better
         this.pressPosition = Vector3.zero;

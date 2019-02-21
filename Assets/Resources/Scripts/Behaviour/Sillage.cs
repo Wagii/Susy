@@ -21,9 +21,12 @@ public class Sillage : MonoBehaviour
     {
         if (Manager.player.velocity.magnitude < sizeCurve.keys[0].time)
         {
-            if (this.collider.enabled) this.collider.enabled = false;
+	        if (this.collider.enabled) 
+		        this.collider.enabled = false;
             return;
-        }
+        } else if (!this.collider.enabled)
+	        this.collider.enabled = true;
+	        
         this.actualSpeed = Mathf.Lerp(this.actualSpeed, Manager.player.velocity.magnitude, this.sizeGrowthRate);
         this.collider.radius = this.sizeCurve.Evaluate(this.actualSpeed);
     }
