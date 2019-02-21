@@ -46,3 +46,5 @@ MonoBehaviour:
   slowParameters: {fileID: 11400000, guid: 4f19d6dad4ec76643a8f3f89f63f0534, type: 2}
   playerMovementParameters: {fileID: 11400000, guid: dedc5b3f67b2b624d8462eca2b52885f,
     type: 2}
+  objectMovementParameters: {fileID: 11400000, guid: 7592cfdb4d807e442bb521e26209b118,
+    type: 2}

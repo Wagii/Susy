@@ -23,7 +23,7 @@ public class BodyCollision : MonoBehaviour {
 	}
 	
 	protected void FixedUpdate() {
-		this.tra.localPosition = this.head.localPosition - Vector3.up * (this.head.localPosition.y/2);
+		this.col.center = this.head.localPosition - Vector3.up * (this.head.localPosition.y/2);
 		this.col.height = this.head.localPosition.y;
 	}
 }

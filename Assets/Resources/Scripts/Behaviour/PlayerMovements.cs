@@ -34,8 +34,8 @@ public class PlayerMovements : MonoBehaviour
 
         // Compute the direction of the projection, reverse or not
         var dir = Manager.parameters.playerMovementParameters.reverse ?
-             (this.position - this.pressPosition).normalized :
-             (this.pressPosition - this.position).normalized;
+        	(this.pressPosition - this.position).normalized :
+        	(this.position - this.pressPosition).normalized;
 
         // Compute the magnitude of the projection, clamped between minimum and maximum value
         var mag = Mathf.Clamp(

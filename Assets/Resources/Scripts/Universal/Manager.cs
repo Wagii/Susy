@@ -7,7 +7,8 @@ public class Manager : MonoBehaviour {
 
     // Parameters
 	public SlowParameters slowParameters;
-    public PlayerMovementParameters playerMovementParameters;
+	public PlayerMovementParameters playerMovementParameters;
+	public ObjectMovementParameters objectMovementParameters;
 
 
     protected void Awake() {
