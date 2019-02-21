@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using Valve.VR;
 
 [RequireComponent(typeof(SteamVR_Behaviour_Pose))]
@@ -52,7 +52,13 @@ public class PlayerMovements : MonoBehaviour
                         (Manager.parameters.playerMovementParameters.add ? Manager.player.velocity : Vector3.zero)
 
                         // Now adding the newVector
-                        + dir * mag * Manager.parameters.playerMovementParameters.playerSpeedMultiplier;
+	        			+ dir * mag * Manager.parameters.playerMovementParameters.playerSpeedMultiplier
+	        
+	        			// Multiplied by the Levy Value
+	        			+ dir * (Manager.parameters.playerMovementParameters.add ? 
+	        					(Vector3.Angle(Manager.player.velocity, dir)/180 
+	        						* Manager.parameters.playerMovementParameters.angleForce)
+	        					: 1);
 
         // Reset value, cuz it's better
         this.pressPosition = Vector3.zero;

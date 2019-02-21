@@ -4,7 +4,7 @@
 public class Sillage : MonoBehaviour
 {
     [SerializeField] private SphereCollider collider;
-    [Header(header: "Speed on X, Size on Y")] [SerializeField] private AnimationCurve sizeCurve;
+    [Header("Speed on X, Size on Y")] [SerializeField] private AnimationCurve sizeCurve;
     [SerializeField] private float sizeGrowthRate = .1f;
     [SerializeField] private float objectSpeedMultiplier = 1f;
     private float actualSpeed = 0;
