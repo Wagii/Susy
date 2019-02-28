@@ -1,1 +1,4 @@
+Fais les mains
+Objectif
+Checkpoints
 FIX MOI CE PUTAIN DE LERP!
