@@ -9,7 +9,7 @@ public class Start : Checkpoint
 	}
 	
 	protected new void OnTriggerEnter(Collider other) {
-		if (!this.check) {
+		if (!this.passed) {
 			this.passed = true;
 			this.check.Invoke();
 		}

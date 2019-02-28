@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class Checkpoint : MonoBehaviour
 {
 	public UnityEvent check;
-	public bool passed { get; private set; }
+	public bool passed { get; protected set; }
 	
 	protected void Awake() {
 		this.passed = false;
@@ -13,7 +13,7 @@ public class Checkpoint : MonoBehaviour
 	public Checkpoint previous, next;
 	
 	protected void OnTriggerEnter(Collider other) {
-		if (this.previous.passed && !this.check) {
+		if (this.previous.passed && !this.passed) {
 			this.passed = true;
 			this.check.Invoke();
 		}
