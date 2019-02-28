@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-[ExecuteInEditMode]
 [RequireComponent(typeof(CapsuleCollider))]
 public class BodyCollision : MonoBehaviour {
 	[SerializeField] private SphereCollider playerHeadCollider;

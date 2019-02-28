@@ -21,6 +21,10 @@
       "requirement": "optional"
     },
     {
+      "name": "/actions/default/in/Stop",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     }

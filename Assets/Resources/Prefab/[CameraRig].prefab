@@ -61,7 +61,9 @@ GameObject:
   - component: {fileID: 147199953}
   - component: {fileID: 8209690398903246354}
   - component: {fileID: 5135084653182006559}
-  - component: {fileID: 1260582861316805122}
+  - component: {fileID: 7874886410768913039}
+  - component: {fileID: 102719268}
+  - component: {fileID: 102719267}
   m_Layer: 0
   m_Name: Controller (left)
   m_TagString: Untagged
@@ -93,28 +95,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 147199951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a5fb0ca93b55ef4b8d54b512b103341, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b1a9cda4f09efb479b746028b054cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   poseAction:
     actionPath: /actions/default/in/Pose
     needsReinit: 0
   inputSource: 1
-  origin: {fileID: 235732969}
+  origin: {fileID: 0}
   onTransformUpdated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3916237348418360148}
-        m_MethodName: UpdatePosition
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: Valve.VR.SteamVR_Behaviour_PoseEvent, SteamVR, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   onTransformChanged:
@@ -147,7 +138,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 147199951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16a9b39235339104889bf8e9178fc630, type: 3}
+  m_Script: {fileID: 11500000, guid: e703aefcd8fb8cb4ebca72ac70c3ea3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   booleanAction:
@@ -183,6 +174,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8604154225477133733}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 7828644754360646791}
+        m_MethodName: Press
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: Valve.VR.SteamVR_Behaviour_BooleanEvent, SteamVR, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   onPressUp:
@@ -191,6 +204,17 @@ MonoBehaviour:
       - m_Target: {fileID: 5135084653182006559}
         m_MethodName: Release
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8604154225477133733}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -210,10 +234,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 147199951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e1322376c751ad4cbfe27340eae0486, type: 3}
+  m_Script: {fileID: 11500000, guid: d0ba153e8b9bcf74ba24f997a470e051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1260582861316805122
+--- !u!114 &7874886410768913039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -222,7 +246,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 147199951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16a9b39235339104889bf8e9178fc630, type: 3}
+  m_Script: {fileID: 11500000, guid: e703aefcd8fb8cb4ebca72ac70c3ea3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   booleanAction:
@@ -276,6 +300,81 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: Valve.VR.SteamVR_Behaviour_BooleanEvent, SteamVR, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &102719268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147199951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e703aefcd8fb8cb4ebca72ac70c3ea3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  booleanAction:
+    actionPath: /actions/default/in/Stop
+    needsReinit: 0
+  inputSource: 1
+  onChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Valve.VR.SteamVR_Behaviour_BooleanEvent, SteamVR, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Valve.VR.SteamVR_Behaviour_BooleanEvent, SteamVR, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPress:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Valve.VR.SteamVR_Behaviour_BooleanEvent, SteamVR, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPressDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 102719267}
+        m_MethodName: Press
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Valve.VR.SteamVR_Behaviour_BooleanEvent, SteamVR, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPressUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 102719267}
+        m_MethodName: Release
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Valve.VR.SteamVR_Behaviour_BooleanEvent, SteamVR, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &102719267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147199951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b68ab62db39e194db9b1b05e6e9ba41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &235732962
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,8 +390,7 @@ GameObject:
   - component: {fileID: 235732964}
   - component: {fileID: 5095617925001385271}
   - component: {fileID: 93795185294903417}
-  - component: {fileID: 1100668904274817220}
-  - component: {fileID: 742732238582349628}
+  - component: {fileID: 5845278325116895755}
   m_Layer: 0
   m_Name: '[CameraRig]'
   m_TagString: Untagged
@@ -317,7 +415,9 @@ Transform:
   - {fileID: 8339956951537383530}
   - {fileID: 1520942390801935128}
   - {fileID: 6876385755129490890}
-  - {fileID: 536513881}
+  - {fileID: 6141537514631451154}
+  - {fileID: 6767873467089264008}
+  - {fileID: 7230043883122497373}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -430,12 +530,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 235732962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a19c95d27a7b8be4cabb59d3cafbb9ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 7eb3c715883e4734188013438bcc8d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   localSlowMultiplier: 1
   localSlowAddition: 0
---- !u!114 &1100668904274817220
+--- !u!114 &5845278325116895755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -444,24 +544,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 235732962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f85ff62a1bbed34b8b1271afbaad70a, type: 3}
+  m_Script: {fileID: 11500000, guid: d402720fc79043647896a9087934add4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 235732964}
---- !u!64 &742732238582349628
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235732962}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
+  slowParameters: {fileID: 11400000, guid: 7baf908ec6888ba4c8aa43c514cc3198, type: 2}
+  playerMovementParameters: {fileID: 11400000, guid: f70b54705fab22b418d8d8e4551d537e,
+    type: 2}
+  objectMovementParameters: {fileID: 11400000, guid: d9e03a398e974d749a167a480fda8c88,
+    type: 2}
 --- !u!1 &235732963
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,7 +564,9 @@ GameObject:
   - component: {fileID: 8667411309293741833}
   - component: {fileID: 4617554507743735230}
   - component: {fileID: 8102781339968987481}
-  - component: {fileID: 8635555652890224674}
+  - component: {fileID: 2583282632539709082}
+  - component: {fileID: 102719266}
+  - component: {fileID: 102719269}
   m_Layer: 0
   m_Name: Controller (right)
   m_TagString: Untagged
@@ -506,28 +598,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 235732963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a5fb0ca93b55ef4b8d54b512b103341, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b1a9cda4f09efb479b746028b054cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   poseAction:
     actionPath: /actions/default/in/Pose
     needsReinit: 0
   inputSource: 2
-  origin: {fileID: 235732969}
+  origin: {fileID: 0}
   onTransformUpdated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3916237348418360148}
-        m_MethodName: UpdatePosition
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: Valve.VR.SteamVR_Behaviour_PoseEvent, SteamVR, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   onTransformChanged:
@@ -560,7 +641,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 235732963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16a9b39235339104889bf8e9178fc630, type: 3}
+  m_Script: {fileID: 11500000, guid: e703aefcd8fb8cb4ebca72ac70c3ea3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   booleanAction:
@@ -596,6 +677,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2048990360305327766}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 4940465554622275225}
+        m_MethodName: Press
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: Valve.VR.SteamVR_Behaviour_BooleanEvent, SteamVR, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   onPressUp:
@@ -604,6 +707,17 @@ MonoBehaviour:
       - m_Target: {fileID: 8102781339968987481}
         m_MethodName: Release
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2048990360305327766}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -623,10 +737,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 235732963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e1322376c751ad4cbfe27340eae0486, type: 3}
+  m_Script: {fileID: 11500000, guid: d0ba153e8b9bcf74ba24f997a470e051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8635555652890224674
+--- !u!114 &2583282632539709082
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -635,7 +749,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 235732963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16a9b39235339104889bf8e9178fc630, type: 3}
+  m_Script: {fileID: 11500000, guid: e703aefcd8fb8cb4ebca72ac70c3ea3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   booleanAction:
@@ -654,18 +768,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   onPress:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4674655885898652897}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: Valve.VR.SteamVR_Behaviour_BooleanEvent, SteamVR, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   onPressDown:
@@ -700,74 +803,81 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: Valve.VR.SteamVR_Behaviour_BooleanEvent, SteamVR, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!64 &886123139
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536678777}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 0b16d1bd1def1c54291626d26ff085b5, type: 3}
---- !u!114 &2463031382987550841
+--- !u!114 &102719266
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536678777}
+  m_GameObject: {fileID: 235732963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0ea48adcd73d4243a37020c0414272c, type: 3}
+  m_Script: {fileID: 11500000, guid: e703aefcd8fb8cb4ebca72ac70c3ea3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider: {fileID: 886123139}
-  cam: {fileID: 794845301}
-  sizeCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 2
-      value: 1.936719
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 10
-      value: 5
-      inSlope: -0.003325495
-      outSlope: -0.003325495
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.13378131
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  sizeGrowthRate: 0.75
-  objectSpeedMultiplier: 1
-  importScale: 1
---- !u!114 &4334900100434228243
+  booleanAction:
+    actionPath: /actions/default/in/Stop
+    needsReinit: 0
+  inputSource: 2
+  onChange:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Valve.VR.SteamVR_Behaviour_BooleanEvent, SteamVR, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Valve.VR.SteamVR_Behaviour_BooleanEvent, SteamVR, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPress:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Valve.VR.SteamVR_Behaviour_BooleanEvent, SteamVR, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPressDown:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 102719269}
+        m_MethodName: Press
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Valve.VR.SteamVR_Behaviour_BooleanEvent, SteamVR, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPressUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 102719269}
+        m_MethodName: Release
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Valve.VR.SteamVR_Behaviour_BooleanEvent, SteamVR, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &102719269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536678777}
+  m_GameObject: {fileID: 235732963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c06b22cbd3b7c734092eb932e7a1a8d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b68ab62db39e194db9b1b05e6e9ba41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 794845301}
 --- !u!1 &794845300
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,7 +975,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 794845300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fbeaa5d58ed36641be7b4733762b700, type: 3}
+  m_Script: {fileID: 11500000, guid: 73c67b746bd2c914dae65a7ab3e37b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: 6339128489683283074}
@@ -873,7 +983,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 1
+      time: 0
       value: 0.09
       inSlope: 0
       outSlope: 0
@@ -882,13 +992,13 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 7
+      time: 10
       value: 1
-      inSlope: 0.30894288
-      outSlope: 0.30894288
+      inSlope: 0.19992542
+      outSlope: 0.19992542
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.12038795
+      inWeight: 0.111513235
       outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -1014,9 +1124,103 @@ MonoBehaviour:
   m_GameObject: {fileID: 1475330420307337296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ad120c420b057049907dc5418fc9ff9, type: 3}
+  m_Script: {fileID: 11500000, guid: f2b708db742809d42b590979217df8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2048990360305327766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7230043883122497373}
+  - component: {fileID: 1425196061885590212}
+  - component: {fileID: 4417208487512621372}
+  - component: {fileID: 4940465554622275225}
+  m_Layer: 0
+  m_Name: RightHand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7230043883122497373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048990360305327766}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 235732969}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1425196061885590212
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048990360305327766}
+  m_Mesh: {fileID: 4300000, guid: fa802fd7b4f39d6478c87ea239de10ab, type: 3}
+--- !u!23 &4417208487512621372
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048990360305327766}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &4940465554622275225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048990360305327766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16272f72c7d179042b7eef73fe069e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 235732970}
+  gizmo: {fileID: 4300000, guid: fa802fd7b4f39d6478c87ea239de10ab, type: 3}
+  reverseGizmo: {fileID: 4300000, guid: 13b4a12048ab6e34aaa0c8eb888c218a, type: 3}
+  reverse: 0
 --- !u!1 &2253742765843245343
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,11 +1276,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2253742765843245343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b82ea9cba636b8d4c98e608c5ad275a6, type: 3}
+  m_Script: {fileID: 11500000, guid: 0eec7795adc56f44782f2ba2ea860582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerHeadCollider: {fileID: 6339128489683283074}
-  radius: 0.1
+  radius: 0.25
 --- !u!1 &4674655885898652897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,87 +1352,253 @@ MonoBehaviour:
   m_GameObject: {fileID: 4674655885898652897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ad120c420b057049907dc5418fc9ff9, type: 3}
+  m_Script: {fileID: 11500000, guid: f2b708db742809d42b590979217df8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &536647641
+--- !u!64 &3900505666801334173
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6141537514630958642}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
+--- !u!114 &5719412243404649741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6141537514630958642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b0fb2467891144c8f426f3746a0786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 794845301}
+--- !u!114 &7746105708946653892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6141537514630958642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70911bbf0af5d5643bf5e378429290ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider: {fileID: 3900505666801334173}
+  cam: {fileID: 794845301}
+  sizeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 15
+      value: 5
+      inSlope: 0.7461315
+      outSlope: 0.7461315
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.15984257
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  sizeGrowthRate: 0.1
+  objectSpeedMultiplier: 1
+  importScale: 1
+--- !u!1 &8604154225477133733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6767873467089264008}
+  - component: {fileID: 3836864684899222421}
+  - component: {fileID: 969268866835549469}
+  - component: {fileID: 7828644754360646791}
+  m_Layer: 0
+  m_Name: LeftHand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6767873467089264008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8604154225477133733}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 235732969}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3836864684899222421
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8604154225477133733}
+  m_Mesh: {fileID: 4300000, guid: fa802fd7b4f39d6478c87ea239de10ab, type: 3}
+--- !u!23 &969268866835549469
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8604154225477133733}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &7828644754360646791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8604154225477133733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16272f72c7d179042b7eef73fe069e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 147199952}
+  gizmo: {fileID: 4300000, guid: fa802fd7b4f39d6478c87ea239de10ab, type: 3}
+  reverseGizmo: {fileID: 4300000, guid: 13b4a12048ab6e34aaa0c8eb888c218a, type: 3}
+  reverse: 0
+--- !u!1001 &6141537514631055506
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 235732969}
     m_Modifications:
-    - target: {fileID: 100000, guid: 0b16d1bd1def1c54291626d26ff085b5, type: 3}
+    - target: {fileID: 100000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
       propertyPath: m_Name
-      value: untitled
+      value: Sillage
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b16d1bd1def1c54291626d26ff085b5, type: 3}
+    - target: {fileID: 400000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b16d1bd1def1c54291626d26ff085b5, type: 3}
+    - target: {fileID: 400000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b16d1bd1def1c54291626d26ff085b5, type: 3}
+    - target: {fileID: 400000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b16d1bd1def1c54291626d26ff085b5, type: 3}
+    - target: {fileID: 400000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.20693432
+      value: -0.49999997
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b16d1bd1def1c54291626d26ff085b5, type: 3}
+    - target: {fileID: 400000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.5368971
+      value: 0.5000001
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b16d1bd1def1c54291626d26ff085b5, type: 3}
+    - target: {fileID: 400000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.13781336
+      value: -0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b16d1bd1def1c54291626d26ff085b5, type: 3}
+    - target: {fileID: 400000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8061806
+      value: 0.49999988
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b16d1bd1def1c54291626d26ff085b5, type: 3}
+    - target: {fileID: 400000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b16d1bd1def1c54291626d26ff085b5, type: 3}
+    - target: {fileID: 400000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b16d1bd1def1c54291626d26ff085b5, type: 3}
+    - target: {fileID: 400000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b16d1bd1def1c54291626d26ff085b5, type: 3}
+    - target: {fileID: 400000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b16d1bd1def1c54291626d26ff085b5, type: 3}
+    - target: {fileID: 400000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.183852
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b16d1bd1def1c54291626d26ff085b5, type: 3}
+    - target: {fileID: 400000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.183852
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b16d1bd1def1c54291626d26ff085b5, type: 3}
+    - target: {fileID: 400000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.183852
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0b16d1bd1def1c54291626d26ff085b5, type: 3}
---- !u!1 &536678777 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 174183fdcba994f41ac9c3cc27abcc78, type: 3}
+--- !u!1 &6141537514630958642 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 0b16d1bd1def1c54291626d26ff085b5,
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 174183fdcba994f41ac9c3cc27abcc78,
     type: 3}
-  m_PrefabInstance: {fileID: 536647641}
+  m_PrefabInstance: {fileID: 6141537514631055506}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &536513881 stripped
+--- !u!4 &6141537514631451154 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 0b16d1bd1def1c54291626d26ff085b5,
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 174183fdcba994f41ac9c3cc27abcc78,
     type: 3}
-  m_PrefabInstance: {fileID: 536647641}
+  m_PrefabInstance: {fileID: 6141537514631055506}
   m_PrefabAsset: {fileID: 0}

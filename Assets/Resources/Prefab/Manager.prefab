@@ -40,11 +40,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 880487887509480022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fbaec838e557984bbf77903b13a3b74, type: 3}
+  m_Script: {fileID: 11500000, guid: d402720fc79043647896a9087934add4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowParameters: {fileID: 11400000, guid: 4f19d6dad4ec76643a8f3f89f63f0534, type: 2}
-  playerMovementParameters: {fileID: 11400000, guid: dedc5b3f67b2b624d8462eca2b52885f,
+  slowParameters: {fileID: 11400000, guid: 7baf908ec6888ba4c8aa43c514cc3198, type: 2}
+  playerMovementParameters: {fileID: 11400000, guid: f70b54705fab22b418d8d8e4551d537e,
     type: 2}
-  objectMovementParameters: {fileID: 11400000, guid: 7592cfdb4d807e442bb521e26209b118,
+  objectMovementParameters: {fileID: 11400000, guid: d9e03a398e974d749a167a480fda8c88,
     type: 2}
