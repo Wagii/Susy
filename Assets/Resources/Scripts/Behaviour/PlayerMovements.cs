@@ -7,12 +7,6 @@ public class PlayerMovements : MonoBehaviour
 {
     private Vector3 position, pressPosition;
 
-    // Setup, in case
-    private void Awake()
-    {
-        if (this.GetComponent<SteamVR_Behaviour_Pose>().origin == null)
-            this.GetComponent<SteamVR_Behaviour_Pose>().origin = Manager.player.transform;
-    }
 
     //// Update Position Value at runtime, position is Local
     //public void UpdatePosition(SteamVR_Behaviour_Pose pos, SteamVR_Input_Sources sources)

@@ -3,7 +3,7 @@
 [RequireComponent(typeof(SphereCollider))]
 public class Sillage : MonoBehaviour
 {
-    [SerializeField] private SphereCollider collider;
+	[SerializeField] private SphereCollider sillageCollider;
     [Header("Speed on X, Size on Y")] [SerializeField] private AnimationCurve sizeCurve;
     [SerializeField] private float sizeGrowthRate = .1f;
     [SerializeField] private float objectSpeedMultiplier = 1f;
@@ -11,8 +11,8 @@ public class Sillage : MonoBehaviour
 
     private void Awake()
     {
-        this.collider.isTrigger = true;
-        this.collider.enabled = false;
+        this.sillageCollider.isTrigger = true;
+        this.sillageCollider.enabled = false;
         if (sizeCurve.length == 0)
             DestroyImmediate(this);
     }
@@ -21,14 +21,14 @@ public class Sillage : MonoBehaviour
     {
         if (Manager.player.velocity.magnitude < sizeCurve.keys[0].time)
         {
-	        if (this.collider.enabled) 
-		        this.collider.enabled = false;
+	        if (this.sillageCollider.enabled) 
+		        this.sillageCollider.enabled = false;
             return;
-        } else if (!this.collider.enabled)
-	        this.collider.enabled = true;
+        } else if (!this.sillageCollider.enabled)
+	        this.sillageCollider.enabled = true;
 	        
         this.actualSpeed = Mathf.Lerp(this.actualSpeed, Manager.player.velocity.magnitude, this.sizeGrowthRate);
-        this.collider.radius = this.sizeCurve.Evaluate(this.actualSpeed);
+        this.sillageCollider.radius = this.sizeCurve.Evaluate(this.actualSpeed);
     }
 
     private void OnTriggerEnter(Collider other)

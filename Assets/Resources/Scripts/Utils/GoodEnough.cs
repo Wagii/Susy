@@ -23,4 +23,10 @@ public static class GoodEnough
             && (first.y >= second.y - (range / 2) && first.y <= second.y + (range / 2)) 
             && (first.z >= second.z - (range / 2) && first.z <= second.z + (range / 2)));
     }
+    
+	public static float Lerp(float value, float to, float step) {
+		if (value == to) return value;
+		if (value > to) return ((value - step) < to? to : value - step);
+		else return (value + step) > to ? to : value + step;
+	}
 }
