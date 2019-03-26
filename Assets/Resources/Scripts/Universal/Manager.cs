@@ -3,7 +3,8 @@
 public class Manager : MonoBehaviour {
     // Static Accessors, DO NOT TOUCH
     public static Manager parameters;
-    public static Rigidbody player;
+	public static Rigidbody player;
+	public static QuestManager quest;
 
     // Parameters
 	public SlowParameters slowParameters;

@@ -32,7 +32,7 @@ public class SillageMeshCollider : MonoBehaviour
 			this.meshCollider.enabled = true;
 	        
 		// TODO : Fix speed Lerp to make the collider grow organically
-		this.actualSpeed = GoodEnough.Lerp(this.actualSpeed, Manager.player.velocity.magnitude, this.sizeGrowthRate);
+		this.actualSpeed = GoodEnough.Lerp(this.actualSpeed, Manager.player.velocity.magnitude, this.sizeGrowthRate * Time.deltaTime);
 		
 		this.meshCollider.transform.localScale = Vector3.one * this.sizeCurve.Evaluate(this.actualSpeed) * importScale;
 		this.meshCollider.transform.LookAt(this.transform.position + Manager.player.velocity, Vector3.up);
@@ -42,6 +42,7 @@ public class SillageMeshCollider : MonoBehaviour
 	{
 		Rigidbody rb = other.GetComponent<Rigidbody>();
 		if (rb == null) return;
-		rb.velocity += ((this.transform.position - rb.position).normalized * Manager.player.velocity.magnitude * this.objectSpeedMultiplier) - Manager.player.velocity.normalized;
+		rb.AddForce(((this.transform.position - rb.position).normalized * Manager.player.velocity.magnitude * this.objectSpeedMultiplier) - Manager.player.velocity.normalized, ForceMode.Impulse);
+		//rb.velocity += ((this.transform.position - rb.position).normalized * Manager.player.velocity.magnitude * this.objectSpeedMultiplier) - Manager.player.velocity.normalized;
 	}
 }
