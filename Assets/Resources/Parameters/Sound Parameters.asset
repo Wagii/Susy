@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b913afe08755c4a8c3df018994879e, type: 3}
+  m_Name: Sound Parameters
+  m_EditorClassIdentifier: 
+  minimumCollisionForce: 0
+  player_collision_sound: 
+  playerCollisionVolume: 1
+  object_collision_sound: 
+  objectCollisionVolume: 1
+  player_acceleration_sound: 
+  playerMinimumAcceleration: 1
+  playerAccelerationVolume: 1
+  object_acceleration_sound: 
+  objectMinimumAcceleration: 1
+  objectAccelerationVolume: 1
+  objectGrabSound: 
+  objectGrabVolume: 1
+  objectThrowSound: 
+  objectThrowVolume: 1

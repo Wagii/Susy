@@ -17,9 +17,9 @@ public class CollisionSound : MonoBehaviour {
 		var rb = GetComponent<Rigidbody>();
 		if (rb == null) return;
 		if (this.sounds.Count == 0) {
-			this.playerSound = RuntimeManager.CreateInstance(Manager.manager.soundParameters.player_collision_sound);
+			this.playerSound = RuntimeManager.CreateInstance(Manager.parameters.soundParameters.player_collision_sound);
 			RuntimeManager.AttachInstanceToGameObject(this.playerSound, tra, rb);
-			this.objectSound = RuntimeManager.CreateInstance(Manager.manager.soundParameters.object_collision_sound);
+			this.objectSound = RuntimeManager.CreateInstance(Manager.parameters.soundParameters.object_collision_sound);
 			RuntimeManager.AttachInstanceToGameObject(this.objectSound, tra, rb);
 		} else {
 			this.instances = new List<EventInstance>(this.sounds.Count);
@@ -34,6 +34,7 @@ public class CollisionSound : MonoBehaviour {
 	protected void OnCollisionEnter(Collision collisionInfo) {
 		for (int i = 0; i < sounds.Count; i++) {
 			if (collisionInfo.relativeVelocity.magnitude < this.sounds[i].minimumValueToActivate) continue;
+			
 			if (collisionInfo.other.tag.Contains(this.sounds[i].collisionTag) == false && this.sounds[i].collisionTag != null) continue;
 			this.instances[i].setVolume(this.sounds[i].soundVolume);
 			this.instances[i].start();

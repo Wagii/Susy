@@ -7,6 +7,7 @@ public class Manager : MonoBehaviour {
 
     // Parameters
 	public SlowParameters slowParameters;
+	public SoundParameters soundParameters;
 	public PlayerMovementParameters playerMovementParameters;
 	public ObjectMovementParameters objectMovementParameters;
 

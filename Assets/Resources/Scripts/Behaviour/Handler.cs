@@ -4,9 +4,9 @@ using Valve.VR;
 public class Handler : MonoBehaviour {
 
 	private const float magicValue = 1.660795f;
-	[SerializeField] private Transform target;
-	[SerializeField] private Mesh gizmo, reverseGizmo;
-	private MeshFilter rd;
+	[SerializeField] private Transform target = null;
+	[SerializeField] private Mesh gizmo = null, reverseGizmo = null;
+	private MeshFilter rd = null;
 	[HideInInspector] public bool reverse = false;
 	
 	private PlayerMovementParameters parameters { get { return Manager.parameters.playerMovementParameters; } }

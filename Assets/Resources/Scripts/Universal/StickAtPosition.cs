@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class StickAtPosition : MonoBehaviour
 {
-	[SerializeField] private Transform target;
-	[SerializeField] private bool pointNorth;
-	[SerializeField] private Transform lookAtTarget;
+	[SerializeField] private Transform target = null;
+	[SerializeField] private bool pointNorth = false;
+	[SerializeField] private Transform lookAtTarget = null;
 
 	protected void FixedUpdate() {
 		if (target == null) {

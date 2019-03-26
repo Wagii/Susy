@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{26c8c2b5-45b1-4192-bfe0-d4d96439f53a}">
+        <property name="name">
+            <value>objectif_rec</value>
+        </property>
+        <relationship name="folder">
+            <destination>{b10aaba0-34a4-4a21-853a-369e4dce8404}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{18f2ea30-1a48-4ff0-9256-7a6bc20a4296}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{18f2ea30-1a48-4ff0-9256-7a6bc20a4296}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

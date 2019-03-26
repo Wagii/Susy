@@ -3,8 +3,8 @@
 [RequireComponent(typeof(SphereCollider))]
 public class HeadColliderSize : MonoBehaviour
 {
-	[SerializeField] private SphereCollider headCollider;
-    [Header("Speed on X, Size on Y")] [SerializeField] private AnimationCurve sizeCurve;
+	[SerializeField] private SphereCollider headCollider = null;
+	[Header("Speed on X, Size on Y")] [SerializeField] private AnimationCurve sizeCurve = null;
     [SerializeField] private float sizeGrowthRate = .1f;
     private float actualSpeed = 0;
 

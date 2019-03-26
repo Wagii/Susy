@@ -3,8 +3,8 @@
 [RequireComponent(typeof(SphereCollider))]
 public class Sillage : MonoBehaviour
 {
-	[SerializeField] private SphereCollider sillageCollider;
-    [Header("Speed on X, Size on Y")] [SerializeField] private AnimationCurve sizeCurve;
+	[SerializeField] private SphereCollider sillageCollider = null;
+	[Header("Speed on X, Size on Y")] [SerializeField] private AnimationCurve sizeCurve = null;
     [SerializeField] private float sizeGrowthRate = .1f;
     [SerializeField] private float objectSpeedMultiplier = 1f;
     private float actualSpeed = 0;

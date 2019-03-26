@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{9db3c33f-32c1-4300-a8ea-da569963999a}">
+        <property name="assetPath">
+            <value>colli3.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>5.1432199546485258</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{b58e4abe-1652-40f3-9c35-df4543991d46}</destination>
+        </relationship>
+    </object>
+</objects>

@@ -29,4 +29,5 @@ public static class GoodEnough
 		if (value > to) return ((value - step) < to? to : value - step);
 		else return (value + step) > to ? to : value + step;
 	}
+	
 }
