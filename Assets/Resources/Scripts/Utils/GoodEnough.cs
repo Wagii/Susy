@@ -29,4 +29,20 @@ public static class GoodEnough
 		if (value > to) return ((value - step) < to? to : value - step);
 		else return (value + step) > to ? to : value + step;
 	}
+	
+	public static float Dist(Vector3 value, Vector3 to) {
+		return (to - value).magnitude;
+	}
+	
+	public static float GetDist(this Vector3 value, Vector3 to) {
+		return (to - value).magnitude;
+	}
+	
+	public static bool IsCloseEnough (Vector3 value, Vector3 to, float range) {
+		return (to - value).magnitude <= range;
+	}
+	
+	public static bool IsCloseEnoughTo (this Vector3 value, Vector3 to, float range) {
+		return (to - value).magnitude <= range;
+	}
 }

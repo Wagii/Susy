@@ -7,9 +7,9 @@ public class LightScript : MonoBehaviour
     private static readonly int fresnelPowerID = Shader.PropertyToID(name: "_FresnelPower");
     private static readonly int lightPowerID = Shader.PropertyToID(name: "_LightPower");
 
-    [SerializeField] private AnimationCurve _light, fresnel;
+	[SerializeField] private AnimationCurve _light = null, fresnel = null;
 
-    [SerializeField] private Rigidbody player;
+    [SerializeField] private Rigidbody player = null;
 
     [SerializeField] private float lightValue = 0, fresnelValue = 5;
 

@@ -3,9 +3,8 @@
 [RequireComponent(typeof(MeshCollider))]
 public class SillageMeshCollider : MonoBehaviour
 {
-	[SerializeField] private MeshCollider collider;
-	[SerializeField] private Transform cam;
-	[Header("Speed on X, Size on Y")] [SerializeField] private AnimationCurve sizeCurve;
+	[SerializeField] private MeshCollider meshCollider = null;
+	[Header("Speed on X, Size on Y")] [SerializeField] private AnimationCurve sizeCurve = null;
 	[SerializeField] private float sizeGrowthRate = .1f;
 	[SerializeField] private float objectSpeedMultiplier = 1f;
 	[Space]
@@ -15,8 +14,8 @@ public class SillageMeshCollider : MonoBehaviour
 
 	private void Awake()
 	{
-		this.collider.isTrigger = true;
-		this.collider.enabled = false;
+		this.meshCollider.isTrigger = true;
+		this.meshCollider.enabled = false;
 		if (sizeCurve.length == 0)
 			DestroyImmediate(this);
 	}
@@ -25,24 +24,25 @@ public class SillageMeshCollider : MonoBehaviour
 	{
 		if (Manager.player.velocity.magnitude < sizeCurve.keys[0].time)
 		{		
-			if (this.collider.enabled) 
-				this.collider.enabled = false;
-			this.collider.transform.localScale = Vector3.one;
+			if (this.meshCollider.enabled) 
+				this.meshCollider.enabled = false;
+			this.meshCollider.transform.localScale = Vector3.one;
 			return;
-		} else if (!this.collider.enabled)
-			this.collider.enabled = true;
+		} else if (!this.meshCollider.enabled)
+			this.meshCollider.enabled = true;
 	        
 		// TODO : Fix speed Lerp to make the collider grow organically
-		this.actualSpeed = Mathf.Lerp(this.actualSpeed, Manager.player.velocity.magnitude, Time.deltaTime);
+		this.actualSpeed = GoodEnough.Lerp(this.actualSpeed, Manager.player.velocity.magnitude, sizeGrowthRate * Time.deltaTime);
 		
-		this.collider.transform.localScale = Vector3.one * this.sizeCurve.Evaluate(this.actualSpeed) * importScale;
-		this.collider.transform.LookAt(this.transform.position + Manager.player.velocity, Vector3.up);
+		this.meshCollider.transform.localScale = Vector3.one * this.sizeCurve.Evaluate(this.actualSpeed) * importScale;
+		this.meshCollider.transform.LookAt(this.transform.position + Manager.player.velocity, Vector3.up);
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
 		Rigidbody rb = other.GetComponent<Rigidbody>();
 		if (rb == null) return;
-		rb.velocity += ((this.transform.position - rb.position).normalized * Manager.player.velocity.magnitude * this.objectSpeedMultiplier) - Manager.player.velocity.normalized;
+		rb.AddForce(((this.transform.position - rb.position).normalized * Manager.player.velocity.magnitude * this.objectSpeedMultiplier) - Manager.player.velocity.normalized, ForceMode.Impulse);
+		//rb.velocity += ((this.transform.position - rb.position).normalized * Manager.player.velocity.magnitude * this.objectSpeedMultiplier) - Manager.player.velocity.normalized;
 	}
 }

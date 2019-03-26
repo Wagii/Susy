@@ -2,10 +2,10 @@
 
 [RequireComponent(typeof(CapsuleCollider))]
 public class BodyCollision : MonoBehaviour {
-	[SerializeField] private SphereCollider playerHeadCollider;
+	[SerializeField] private SphereCollider playerHeadCollider = null;
 	[SerializeField] private float radius = 1;
-	private CapsuleCollider col;
-	private Transform tra;
+	private CapsuleCollider col = null;
+	private Transform tra = null;
 	
 	private Transform head { get { return playerHeadCollider.transform; } }
 	

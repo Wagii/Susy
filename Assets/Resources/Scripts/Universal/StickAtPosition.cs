@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class StickAtPosition : MonoBehaviour
 {
-	[SerializeField] private Transform target;
-	[SerializeField] private bool pointNorth;
-	[SerializeField] private Transform lookAtTarget;
+	[SerializeField] private Transform target = null;
+	[SerializeField] private bool pointNorth = false;
 
 	protected void FixedUpdate() {
 		if (target == null) {
@@ -20,16 +19,5 @@ public class StickAtPosition : MonoBehaviour
 			this.transform.forward = Vector3.forward;
 			return;
 		}
-		
-		if (lookAtTarget == null) {
-			GetComponent<Renderer>().enabled = false;
-			return;
-		}
-		else 
-			this.transform.LookAt(lookAtTarget);
-	}
-    
-	public void SetNewTarget (Transform newTarget) {
-		lookAtTarget = newTarget;
 	}
 }

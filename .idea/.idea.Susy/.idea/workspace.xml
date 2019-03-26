@@ -26,30 +26,10 @@
     <list default="true" id="650e6471-498c-42f1-a38e-c16e840f127a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Susy/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Susy/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Susy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Susy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Untitled.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Untitled.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Extras/SteamVR_ForceSteamVRMode.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Extras/SteamVR_ForceSteamVRMode.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Core/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Core/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Longbow/Prefabs/Arrow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Longbow/Prefabs/Arrow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Poses/CubePose small.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Poses/CubePose small.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Poses/HappyBallPose.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Poses/HappyBallPose.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Poses/HappyBallPoseSqueezed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Poses/HappyBallPoseSqueezed.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Samples/JoeJeff/Materials/PController.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Samples/JoeJeff/Materials/PController.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Samples/Prefabs/Buggy Controller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Samples/Prefabs/Buggy Controller.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Samples/Prefabs/JoeJeffController.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Samples/Prefabs/JoeJeffController.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Teleport/Prefabs/Teleporting.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/InteractionSystem/Teleport/Prefabs/Teleporting.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/[CameraRig].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/[CameraRig].prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_glove_left.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_glove_left.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_glove_left_model_slim.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_glove_left_model_slim.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_glove_right.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_glove_right.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_glove_right_model_slim.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_glove_right_model_slim.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_hand_alien_left.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_hand_alien_left.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_hand_alien_right.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_hand_alien_right.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_hand_floppy_left.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_hand_floppy_left.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_hand_floppy_right.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Prefabs/vr_hand_floppy_right.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR/Resources/SteamVR_Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR/Resources/SteamVR_Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR_Input/ActionSetClasses/SteamVR_Input_ActionSet_Susy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR_Input/ActionSetClasses/SteamVR_Input_ActionSet_Susy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SteamVR_Input/SteamVR_Input_Actions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SteamVR_Input/SteamVR_Input_Actions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/actions.json" beforeDir="false" afterPath="$PROJECT_DIR$/actions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/[CameraRig].prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefab/[CameraRig].prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Behaviour/HeadColliderSize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Behaviour/HeadColliderSize.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Behaviour/SillageMeshCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Behaviour/SillageMeshCollider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Scripts/Universal/StickAtPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Scripts/Universal/StickAtPosition.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,23 +42,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@0.0.12-preview.23/Unity.Entities.PerformanceTests/Unity.Entities.PerformanceTests.asmdef">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="32">
               <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Player_Movement.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Universal/StickAtPosition.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+            <state relative-caret-position="416">
+              <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
               <folding>
-                <marker date="1550196091255" expanded="true" signature="6:125" ph="..." />
-                <marker date="1550196091255" expanded="true" signature="171:847" ph="{...}" />
-                <marker date="1550196091255" expanded="true" signature="303:357" ph="{...}" />
-                <marker date="1550196091255" expanded="true" signature="457:501" ph="{...}" />
-                <marker date="1550196091255" expanded="true" signature="603:845" ph="{...}" />
+                <marker date="1552648454059" expanded="false" signature="6:78" ph="..." />
+                <marker date="1552648454059" expanded="true" signature="124:1016" ph="{...}" />
+                <marker date="1552648454059" expanded="true" signature="418:460" ph="{...}" />
+                <marker date="1552648454059" expanded="true" signature="492:928" ph="{...}" />
+                <marker date="1552648454059" expanded="true" signature="508:542" ph="{...}" />
+                <marker date="1552648454059" expanded="true" signature="617:678" ph="{...}" />
+                <marker date="1552648454059" expanded="true" signature="702:746" ph="{...}" />
+                <marker date="1552648454059" expanded="true" signature="982:1014" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -87,7 +70,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/SteamVR/Input/SteamVR_Behaviour_Boolean.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
+            <state relative-caret-position="848">
               <caret line="67" selection-start-line="67" selection-end-line="67" />
               <folding>
                 <marker date="1548876907000" expanded="false" signature="6:212" ph="..." />
@@ -128,9 +111,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Universal/StickAtPosition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@0.0.12-preview.23/Unity.Entities.PerformanceTests/Unity.Entities.PerformanceTests.asmdef" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SteamVR/Input/SteamVR_Behaviour_Boolean.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Player_Movement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -138,6 +121,7 @@
         <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.entities@0.0.12-preview.23/Unity.Entities.PerformanceTests/Unity.Entities.PerformanceTests.asmdef" />
         <option value="$PROJECT_DIR$/Assets/justprintthings.cs" />
         <option value="$PROJECT_DIR$/Assets/Player_Movement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Universal/StickAtPosition.cs" />
       </list>
     </option>
   </component>
@@ -158,10 +142,10 @@
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -210,11 +194,13 @@
       <workItem from="1549885752114" duration="376000" />
       <workItem from="1550194341581" duration="56000" />
       <workItem from="1550194701546" duration="1433000" />
+      <workItem from="1552647312745" duration="426000" />
+      <workItem from="1552648344786" duration="690000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2304000" />
+    <option name="totallyTimeSpent" value="3420000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -228,7 +214,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -277,23 +263,18 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/Resources/Slower.cs" />
     <entry file="file://$PROJECT_DIR$/Temp/Compiled-Outlined-Silhouetted Diffuse.shader" />
+    <entry file="file://$PROJECT_DIR$/Assets/justprintthings.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Player_Movement.cs" />
     <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@0.0.12-preview.23/Unity.Entities.PerformanceTests/Unity.Entities.PerformanceTests.asmdef">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="32">
           <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/justprintthings.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/SteamVR/Input/SteamVR_Behaviour_Boolean.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
+        <state relative-caret-position="848">
           <caret line="67" selection-start-line="67" selection-end-line="67" />
           <folding>
             <marker date="1548876907000" expanded="false" signature="6:212" ph="..." />
@@ -327,16 +308,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Player_Movement.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Universal/StickAtPosition.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+        <state relative-caret-position="416">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
           <folding>
-            <marker date="1550196091255" expanded="true" signature="6:125" ph="..." />
-            <marker date="1550196091255" expanded="true" signature="171:847" ph="{...}" />
-            <marker date="1550196091255" expanded="true" signature="303:357" ph="{...}" />
-            <marker date="1550196091255" expanded="true" signature="457:501" ph="{...}" />
-            <marker date="1550196091255" expanded="true" signature="603:845" ph="{...}" />
+            <marker date="1552648454059" expanded="false" signature="6:78" ph="..." />
+            <marker date="1552648454059" expanded="true" signature="124:1016" ph="{...}" />
+            <marker date="1552648454059" expanded="true" signature="418:460" ph="{...}" />
+            <marker date="1552648454059" expanded="true" signature="492:928" ph="{...}" />
+            <marker date="1552648454059" expanded="true" signature="508:542" ph="{...}" />
+            <marker date="1552648454059" expanded="true" signature="617:678" ph="{...}" />
+            <marker date="1552648454059" expanded="true" signature="702:746" ph="{...}" />
+            <marker date="1552648454059" expanded="true" signature="982:1014" ph="{...}" />
           </folding>
         </state>
       </provider>
