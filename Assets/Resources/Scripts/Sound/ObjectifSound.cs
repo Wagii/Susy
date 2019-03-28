@@ -13,7 +13,9 @@ public class ObjectifSound : MonoBehaviour {
 	}
 	
 	protected void Update() {
-		this.sound.setParameterValue("distance", Manager.parameters.soundParameters.dist.Evaluate(/*QuestMan.dist*/));
+		if (Manager.quest.activeQuest == null) return;
+		
+		this.sound.setParameterValue("distance", Manager.parameters.soundParameters.dist.Evaluate(Mathf.Abs((Manager.quest.activeQuest.objective.position - this.transform.position).magnitude)));
 	}
 	
 	public void StartQuest() {

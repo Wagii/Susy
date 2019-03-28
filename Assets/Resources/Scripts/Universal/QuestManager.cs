@@ -40,40 +40,21 @@ public class QuestManager : MonoBehaviour {
 		}
 	}
 
-	//private void SetNextDestination(int i) {
-	//	if (i < this.activeQuest.checkpoints.Count) {
-	//		this.objective.number = i;
-	//		this.objective.transform = this.activeQuest.checkpoints[i].transform;
-	//	} else {
-	//		this.objective.number = -1;
-	//		this.objective.transform = this.activeQuest.end.transform;
-	//	}
-	//	ChangeTarget(this.objective.transform);
-	//}
-
-	//private void SetNextDestination() {
-	//	if (this.objective.number + 1 < this.activeQuest.checkpoints.Count) {
-	//		this.objective.number++;
-	//		this.objective.transform = this.activeQuest.checkpoints[this.objective.number].transform;
-	//	} else {
-	//		this.objective.number = -1;
-	//		this.objective.transform = this.activeQuest.end.transform;
-	//	}
-	//	ChangeTarget(this.objective.transform);
-	//}
-
 	public void StartQuest (StartPoint quest) {
 		Status = PlayerQuestStatus.INQUEST;
 		this.timer = quest.maxTime;
 		this.activeQuest = quest;
 		FindNearestQuest.nearestQuest.StopSearch();
 		DisableButOneQuest(quest);
+		ChangeTarget(quest.objective.checkpoint.transform);
+		PlaySound(SoundType.Start);
 	}
 
 	public bool Checkpoint () {
 		this.timer += (this.activeQuest.maxTime * this.activeQuest.objective.checkpoint.percentTimeAdd) + (activeQuest.maxTime * (timer/activeQuest.maxTime));
+		ChangeTarget(activeQuest.objective.checkpoint.transform);
+		PlaySound(SoundType.Check);
 		return this.activeQuest.Check();
-
 	}
 
 	public void EndQuest () {
@@ -83,6 +64,8 @@ public class QuestManager : MonoBehaviour {
 		ReadyAllQuests();
 		ChangeTarget(null);
 		FindNearestQuest.nearestQuest.StartSearch();
+		this.activeQuest = null;
+		PlaySound(SoundType.End);
 	}
 
 	protected void Update() {
@@ -100,6 +83,38 @@ public class QuestManager : MonoBehaviour {
 				this.activeQuest.QuestStatusChanged(QuestStatus.READY);
 				this.activeQuest = null;
 			}
+		}
+	}
+	
+	
+	
+	
+	
+	private enum SoundType {
+		Start,
+		Check,
+		End
+	};
+	
+	private ObjectifSound objSound { get { return ObjectifSound.objSound; } }
+	
+	private void PlaySound (SoundType type) {
+		switch (type)
+		{
+		case SoundType.Start:
+			objSound.StartQuest();
+			break;
+		
+		case SoundType.Check:
+			objSound.StartQuest();
+			break;
+				
+		case SoundType.End:
+			objSound.EndQuest();
+			break;
+				
+		default:
+			break;
 		}
 	}
 }

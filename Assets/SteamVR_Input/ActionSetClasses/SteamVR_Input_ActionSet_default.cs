@@ -33,30 +33,6 @@ namespace Valve.VR
             }
         }
         
-        public virtual SteamVR_Action_Boolean MoveObject
-        {
-            get
-            {
-                return SteamVR_Actions.default_MoveObject;
-            }
-        }
-        
-        public virtual SteamVR_Action_Boolean HandCollide
-        {
-            get
-            {
-                return SteamVR_Actions.default_HandCollide;
-            }
-        }
-        
-        public virtual SteamVR_Action_Boolean Stop
-        {
-            get
-            {
-                return SteamVR_Actions.default_Stop;
-            }
-        }
-        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get

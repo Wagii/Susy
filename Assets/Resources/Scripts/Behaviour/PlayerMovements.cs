@@ -6,15 +6,13 @@ using Valve.VR;
 public class PlayerMovements : MonoBehaviour
 {
     private Vector3 position, pressPosition;
+	private Slower slower;
 
+	protected void Start() {
+		this.slower = Manager.player.GetComponent<Slower>();
+	}
 
-    //// Update Position Value at runtime, position is Local
-    //public void UpdatePosition(SteamVR_Behaviour_Pose pos, SteamVR_Input_Sources sources)
-    //{
-	//    this.position = transform.localPosition;
-    //}
-    
-	protected void Update() {
+    protected void Update() {
 		this.position = transform.localPosition;
 	}
 
@@ -41,9 +39,16 @@ public class PlayerMovements : MonoBehaviour
             Manager.parameters.playerMovementParameters.minVectorValue,
             Manager.parameters.playerMovementParameters.maxVectorValue);
 
-        // Compute new Velocity
-        // Velocity here is an = and not a += because of the next line
-        Manager.player.velocity =
+	    // Compute if the input vector is opposite from the velocity
+	    if (Vector3.Angle(dir, Manager.player.velocity.normalized) > Manager.parameters.playerMovementParameters.stopAngleThreshold 
+		    && Manager.player.velocity.magnitude >= 1)
+	    	// Instead of adding speed, decrease speed by an amount
+	    	this.slower.localSlowMultiplier += mag*InputSlow.inputSlow.slowPower;
+	    	
+	    else
+        	// Compute new Velocity
+        	// Velocity here is an = and not a += because of the next line
+        	Manager.player.velocity =
                         // Ternary operation to determine if projection uses force addition or velocity change
                         // If add is true, operation become 'Velocity = Velocity + newVector'
                         // If add is false operation become 'Velocity = 0 + newVector' or in other words 'Velocity = newVector'
@@ -51,7 +56,6 @@ public class PlayerMovements : MonoBehaviour
 
                         // Now adding the newVector
 	        			+ dir * mag * Manager.parameters.playerMovementParameters.playerSpeedMultiplier;
-	        
 
         // Reset value, cuz it's better
         this.pressPosition = Vector3.zero;

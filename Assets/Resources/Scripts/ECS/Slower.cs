@@ -9,7 +9,7 @@ public class Slower : MonoBehaviour {
 
     // LEAVE !
 
-	[SerializeField] private float localSlowMultiplier = 1f;
+	[SerializeField] public float localSlowMultiplier = 1f;
 	[SerializeField] private float localSlowAddition = 0f;
 	[HideInInspector] public float slowMultiplier { get { return localSlowMultiplier; } }
 	[HideInInspector] public Vector3 slowAddition { get { return Vector3.one * localSlowAddition;} }

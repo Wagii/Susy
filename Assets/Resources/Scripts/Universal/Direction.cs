@@ -10,13 +10,15 @@ public class Direction : MonoBehaviour {
 
 	protected void Awake () {
 		this.rd = GetComponent<Renderer>();
-		if (target == null) {
-			Destroy(this);
-			return;
-		}
 	}
 	
 	protected void FixedUpdate() {
+		if (target == null) {
+			if (this.rd.enabled)
+				this.rd.enabled = false;
+			return;
+		}
+		
 		this.transform.position = this.pos.position;
 		
 		if (this.target == null) {
@@ -31,5 +33,6 @@ public class Direction : MonoBehaviour {
 	
 	public void SetNewTarget (Transform newTarget) {
 		this.target = newTarget;
+		if (this.rd.enabled == false) this.rd.enabled = true;
 	}
 }

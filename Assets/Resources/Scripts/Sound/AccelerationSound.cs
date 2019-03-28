@@ -17,8 +17,8 @@ public class AccelerationSound : MonoBehaviour {
 	}
     
 	protected void Update() {
-		this.speed = GoodEnough.Lerp(this.speed, playerSpeed, (this.speed < playerSpeed)? this.crescendoSpeed : this.descrecendoSpeed);
+		this.speed = Mathf.Clamp01(GoodEnough.Lerp(this.speed, playerSpeed, (this.speed < playerSpeed)? this.crescendoSpeed : this.descrecendoSpeed)/Manager.parameters.soundParameters.playerAccelerationVolumeDivider);
 		
-		this.sound.setParameterValue("speed", Mathf.Clamp01(this.speed/Manager.parameters.soundParameters.playerAccelerationVolumeDivider));
+		this.sound.setParameterValue("speed", this.speed);
 	}
 }

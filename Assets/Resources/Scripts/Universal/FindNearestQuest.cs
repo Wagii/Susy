@@ -13,10 +13,11 @@ public class FindNearestQuest : MonoBehaviour {
 	protected void Start() {
 		FindNearestQuest.nearestQuest = this;
 		starts = new List<StartPoint>(FindObjectsOfType<StartPoint>());
+		StartSearch();
 	}
 	
 	public void StartSearch () {
-		if (routine == null) StartCoroutine(GetStarts());
+		if (routine == null) routine = StartCoroutine(GetStarts());
 	}
 	
 	public void StopSearch () {

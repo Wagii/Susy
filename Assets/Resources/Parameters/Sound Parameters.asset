@@ -13,17 +13,36 @@ MonoBehaviour:
   m_Name: Sound Parameters
   m_EditorClassIdentifier: 
   minimumCollisionForce: 0
-  player_collision_sound: 
-  playerCollisionVolume: 1
-  object_collision_sound: 
+  player_collision_sound: event:/Joueur/collision_joueur
+  playerCollisionVolumeDivider: 25
+  object_collision_sound: event:/Objets/collision_objet
   objectCollisionVolume: 1
-  player_acceleration_sound: 
+  player_acceleration_sound: event:/Joueur/propulsion
   playerMinimumAcceleration: 1
-  playerAccelerationVolume: 1
-  object_acceleration_sound: 
-  objectMinimumAcceleration: 1
-  objectAccelerationVolume: 1
-  objectGrabSound: 
-  objectGrabVolume: 1
-  objectThrowSound: 
-  objectThrowVolume: 1
+  playerAccelerationVolumeDivider: 25
+  objectif_manager: event:/Bras/objectifs
+  dist:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 25
+      value: 1
+      inSlope: 0.000083330306
+      outSlope: 0.000083330306
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.07551468
+    - serializedVersion: 3
+      time: 250
+      value: 0
+      inSlope: -0.0007043984
+      outSlope: -0.0007043984
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.057005413
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  ambiance1: event:/Musique/ambiance1

@@ -11,20 +11,6 @@
       "requirement": "mandatory"
     },
     {
-      "name": "/actions/default/in/MoveObject",
-      "type": "boolean",
-      "requirement": "suggested"
-    },
-    {
-      "name": "/actions/default/in/HandCollide",
-      "type": "boolean",
-      "requirement": "optional"
-    },
-    {
-      "name": "/actions/default/in/Stop",
-      "type": "boolean"
-    },
-    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     }
