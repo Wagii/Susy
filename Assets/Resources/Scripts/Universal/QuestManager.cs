@@ -6,6 +6,7 @@ public class QuestManager : MonoBehaviour {
 	public static void ChangeTarget(Transform target) {
 		foreach (var item in GameObject.FindObjectsOfType<Direction>())
 			item.SetNewTarget(target);
+		Debug.Log(target);
 	}
 
 	public StartPoint activeQuest = null;
@@ -52,7 +53,7 @@ public class QuestManager : MonoBehaviour {
 
 	public bool Checkpoint () {
 		this.timer += (this.activeQuest.maxTime * this.activeQuest.objective.checkpoint.percentTimeAdd) + (activeQuest.maxTime * (timer/activeQuest.maxTime));
-		ChangeTarget(activeQuest.objective.checkpoint.transform);
+		//ChangeTarget(activeQuest.objective.checkpoint.transform);
 		PlaySound(SoundType.Check);
 		return this.activeQuest.Check();
 	}
@@ -71,9 +72,12 @@ public class QuestManager : MonoBehaviour {
 	protected void Update() {
 		if (this.status == PlayerQuestStatus.INQUEST) {
 			if (Manager.player.position.IsCloseEnoughTo(this.activeQuest.objective.position, this.activeQuest.objective.validationRange)) {
+				Debug.Log("entered");
 				if (Checkpoint()) {
 					EndQuest();
 					return;
+				} else {
+					ChangeTarget(activeQuest.objective.checkpoint.transform);
 				}
 			}
 

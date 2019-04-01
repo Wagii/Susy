@@ -24,6 +24,8 @@ public class StartPoint : MonoBehaviour
 		}
 		if (this.startCollider == null) return;
 		this.startCollider.isTrigger = true;
+		this.objective.number = 0;
+		this.objective.checkpoint = checkpoints[0];
 	}
 	
 	public void QuestStatusChanged (QuestStatus status) {
@@ -62,12 +64,9 @@ public class StartPoint : MonoBehaviour
 	}
 	
 	protected void OnTriggerEnter(Collider other) {
-		if (this.status != QuestStatus.READY && Manager.quest.Status == PlayerQuestStatus.SEARCHING) return;
-		
-		if (other.tag == "Player") {
-			Manager.quest.StartQuest(this);
-			Manager.quest.DisableButOneQuest(this);
-		}
+		if (this.status != QuestStatus.READY && Manager.quest.Status == PlayerQuestStatus.SEARCHING && other.tag != "Player") return;
+		Debug.Log("inside");
+		Manager.quest.StartQuest(this);
 	}
 	
 	public void ObjectiveReset () {

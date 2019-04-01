@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 
-[RequireComponent(typeof(Direction))]
 public class FindNearestQuest : MonoBehaviour {
 	
 	public static FindNearestQuest nearestQuest = null;

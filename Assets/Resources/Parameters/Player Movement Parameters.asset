@@ -15,7 +15,7 @@ MonoBehaviour:
   minVectorValue: 0.1
   maxVectorValue: 5
   playerSpeedMultiplier: 25
-  stopAngleThreshold: 150
+  stopAngleThreshold: 130
   stopPower:
     serializedVersion: 2
     m_Curve:
