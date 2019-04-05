@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minVectorValue: 0.1
   maxVectorValue: 5
-  playerSpeedMultiplier: 25
+  playerSpeedMultiplier: 250
   stopAngleThreshold: 130
   stopPower:
     serializedVersion: 2
