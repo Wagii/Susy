@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{0f7e1f93-cc22-4d6a-bcec-cecfc8df6ef1}">
+        <property name="name">
+            <value>quartier2</value>
+        </property>
+        <relationship name="folder">
+            <destination>{b10aaba0-34a4-4a21-853a-369e4dce8404}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{7ac830ec-b5de-41f8-8128-680d9bef2947}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{7ac830ec-b5de-41f8-8128-680d9bef2947}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+        <property name="seekSpeed">
+            <value>0.50000005960464478</value>
+        </property>
+    </object>
+</objects>

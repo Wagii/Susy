@@ -9,22 +9,14 @@ public class LightScript : MonoBehaviour
 
 	[SerializeField] private AnimationCurve _light = null, fresnel = null;
 
-	[SerializeField] private Rigidbody player = null;
-
-    [SerializeField] private float lightValue = 0, fresnelValue = 5;
-
-    protected void Start()
-    {
-        if (this.player == null)
-            this.player = FindObjectOfType<Rigidbody>();
-    }
+	[SerializeField] private float lightValue = 0, fresnelValue = 5;
 
     protected void Update()
     {
-        this.lightValue = Mathf.Clamp(this._light.Evaluate(this.player.velocity.magnitude * 5), 0, 5);
-        this.fresnelValue = Mathf.Clamp(5 - this.fresnel.Evaluate((this.transform.position - this.player.position).magnitude), 0, 5);
-        this.GetComponent<Renderer>().material.SetFloat("_LightPower", lightValue);
-        this.GetComponent<Renderer>().material.SetFloat("_FresnelPower", fresnelValue);
+	    this.lightValue = this._light.Evaluate(Manager.player.velocity.magnitude);
+	    this.fresnelValue = this.fresnel.Evaluate((this.transform.position - Manager.player.position).magnitude);
+	    this.GetComponent<Renderer>().material.SetFloat(lightPowerID, lightValue);
+	    this.GetComponent<Renderer>().material.SetFloat(fresnelPowerID, fresnelValue);
     }
 }
 

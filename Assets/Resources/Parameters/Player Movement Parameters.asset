@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e3845f79cc9c774a91a48262518d8ed, type: 3}
   m_Name: Player Movement Parameters
   m_EditorClassIdentifier: 
-  minVectorValue: 0.1
+  minVectorValue: 0.01
   maxVectorValue: 5
-  playerSpeedMultiplier: 250
+  playerSpeedMultiplier: 200
   stopAngleThreshold: 130
   stopPower:
     serializedVersion: 2

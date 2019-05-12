@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets\fmod\fmod.fspro
-  SourceProjectPathUnformatted: Assets\fmod\fmod.fspro
-  SourceBankPathUnformatted: Assets\fmod\Build
+  sourceProjectPath: Assets/fmod_Susy_final/fmod_Susy_final.fspro
+  SourceProjectPathUnformatted: Assets/fmod_Susy_final/fmod_Susy_final.fspro
+  SourceBankPathUnformatted: Assets/fmod_Susy_final/Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0

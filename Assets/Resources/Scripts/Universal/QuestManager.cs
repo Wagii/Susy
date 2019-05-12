@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 
 public class QuestManager : MonoBehaviour {
@@ -6,7 +7,6 @@ public class QuestManager : MonoBehaviour {
 	public static void ChangeTarget(Transform target) {
 		foreach (var item in GameObject.FindObjectsOfType<Direction>())
 			item.SetNewTarget(target);
-		Debug.Log(target);
 	}
 
 	public StartPoint activeQuest = null;
@@ -17,7 +17,12 @@ public class QuestManager : MonoBehaviour {
 	private List<StartPoint> quests = new List<StartPoint>();
 	private PlayerQuestStatus status = PlayerQuestStatus.SEARCHING;
 	private float timer = 0;
-	private float score = 0;
+	private int score = 0;
+	
+	public bool hasColis = true;
+	
+	[SerializeField] private List<Text> times = null;
+	[SerializeField] private List<Text> scores = null;
 
 	protected void Start() {
 		Manager.quest = this;
@@ -42,6 +47,7 @@ public class QuestManager : MonoBehaviour {
 	}
 
 	public void StartQuest (StartPoint quest) {
+		if (!this.hasColis) return;
 		Status = PlayerQuestStatus.INQUEST;
 		this.timer = quest.maxTime;
 		this.activeQuest = quest;
@@ -52,7 +58,10 @@ public class QuestManager : MonoBehaviour {
 	}
 
 	public bool Checkpoint () {
-		this.timer += (this.activeQuest.maxTime * this.activeQuest.objective.checkpoint.percentTimeAdd) + (activeQuest.maxTime * (timer/activeQuest.maxTime));
+		Debug.Log((this.activeQuest.maxTime * (this.activeQuest.objective.checkpoint.percentTimeAdd/100)));
+		Debug.Log((activeQuest.maxTime * (timer/activeQuest.maxTime)));
+		
+		this.timer += (this.activeQuest.maxTime * (this.activeQuest.objective.checkpoint.percentTimeAdd/100))/* + (activeQuest.maxTime * (timer/activeQuest.maxTime))*/;
 		//ChangeTarget(activeQuest.objective.checkpoint.transform);
 		PlaySound(SoundType.Check);
 		return this.activeQuest.Check();
@@ -60,7 +69,13 @@ public class QuestManager : MonoBehaviour {
 
 	public void EndQuest () {
 		Status = PlayerQuestStatus.SEARCHING;
-		score += activeQuest.score + (activeQuest.score * (this.timer/this.activeQuest.maxTime));
+		score += (int)(activeQuest.score + (activeQuest.score * (this.timer/this.activeQuest.maxTime)));
+		
+		
+		foreach (var item in scores)
+			item.text = this.score.ToString() + "$";
+		
+		
 		this.activeQuest.QuestStatusChanged(QuestStatus.COMPLETE);
 		ReadyAllQuests();
 		ChangeTarget(null);
@@ -71,8 +86,7 @@ public class QuestManager : MonoBehaviour {
 
 	protected void Update() {
 		if (this.status == PlayerQuestStatus.INQUEST) {
-			if (Manager.player.position.IsCloseEnoughTo(this.activeQuest.objective.position, this.activeQuest.objective.validationRange)) {
-				Debug.Log("entered");
+			if (Manager.player.position.IsCloseEnoughTo(this.activeQuest.objective.position, this.activeQuest.objective.validationRange) && this.hasColis) {
 				if (Checkpoint()) {
 					EndQuest();
 					return;
@@ -82,12 +96,19 @@ public class QuestManager : MonoBehaviour {
 			}
 
 			this.timer -= Time.deltaTime;
+			foreach (var item in times)
+				item.text = FloatToTime(this.timer);
 			if (this.timer <= 0) {
 				this.activeQuest.ObjectiveReset();
 				this.activeQuest.QuestStatusChanged(QuestStatus.READY);
 				this.activeQuest = null;
 			}
-		}
+		} else
+			if (timer != 0) {
+				timer = 0;
+				foreach (var item in times)
+					item.text = "00:00";
+			}
 	}
 	
 	
@@ -120,5 +141,10 @@ public class QuestManager : MonoBehaviour {
 		default:
 			break;
 		}
+	}
+	
+	private string FloatToTime(float time) {
+		int intTime = (int)time;
+		return ((intTime/60<10?"0":"") + (intTime/60).ToString() +":"+(intTime%60<10?"0":"") + (intTime%60).ToString());
 	}
 }

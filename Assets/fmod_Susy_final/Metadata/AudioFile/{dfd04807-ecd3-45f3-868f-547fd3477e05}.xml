@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{dfd04807-ecd3-45f3-868f-547fd3477e05}">
+        <property name="assetPath">
+            <value>chanson2_fini.wav</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>82.5</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{b58e4abe-1652-40f3-9c35-df4543991d46}</destination>
+        </relationship>
+    </object>
+</objects>

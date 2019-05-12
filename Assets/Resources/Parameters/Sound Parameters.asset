@@ -34,7 +34,7 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.07551468
     - serializedVersion: 3
-      time: 250
+      time: 1000
       value: 0
       inSlope: -0.0007043984
       outSlope: -0.0007043984
@@ -45,4 +45,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  ambiance1: event:/Musique/ambiance1
+  ambiance1: event:/Musique/manager
