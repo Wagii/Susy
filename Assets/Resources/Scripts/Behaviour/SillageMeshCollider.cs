@@ -5,13 +5,13 @@ public class SillageMeshCollider : MonoBehaviour
 {
 	[SerializeField] private MeshCollider meshCollider = null;
 	[Header("Speed on X, Size on Y")] [SerializeField] private AnimationCurve sizeCurve = null;
-	[SerializeField] private float sizeGrowthRate = .1f;
+	[Range(0,1000)][SerializeField] private float sizeGrowthRate = .1f;
 	[SerializeField] private float objectSpeedMultiplier = 1f;
 	[Space]
 	[Header("Value for the transfer 3Dmodel->Unity (import scale)")]
 	[SerializeField] private float importScale = 1;
 	private float actualSpeed = 0;
-
+	
 	private void Awake()
 	{
 		this.meshCollider.isTrigger = true;
@@ -26,7 +26,7 @@ public class SillageMeshCollider : MonoBehaviour
 		{		
 			if (this.meshCollider.enabled) 
 				this.meshCollider.enabled = false;
-			this.meshCollider.transform.localScale = Vector3.one;
+			this.meshCollider.transform.localScale = Vector3.one * importScale;
 			return;
 		} else if (!this.meshCollider.enabled)
 			this.meshCollider.enabled = true;
@@ -37,12 +37,14 @@ public class SillageMeshCollider : MonoBehaviour
 		this.meshCollider.transform.localScale = Vector3.one * this.sizeCurve.Evaluate(this.actualSpeed) * importScale;
 		this.meshCollider.transform.LookAt(this.transform.position + Manager.player.velocity, Vector3.up);
 	}
+	
 
 	private void OnTriggerEnter(Collider other)
 	{
 		Rigidbody rb = other.GetComponent<Rigidbody>();
 		if (rb == null) return;
-		rb.AddForce(((this.transform.position - rb.position).normalized * Manager.player.velocity.magnitude * this.objectSpeedMultiplier) - Manager.player.velocity.normalized, ForceMode.Impulse);
-		//rb.velocity += ((this.transform.position - rb.position).normalized * Manager.player.velocity.magnitude * this.objectSpeedMultiplier) - Manager.player.velocity.normalized;
+		
+		//rb.AddForce(((this.transform.position - rb.position).normalized * Manager.player.velocity.magnitude * this.objectSpeedMultiplier) - Manager.player.velocity.normalized, ForceMode.Impulse);
+		rb.velocity += ((this.transform.position - rb.position).normalized * Manager.player.velocity.magnitude * this.objectSpeedMultiplier) - Manager.player.velocity.normalized;
 	}
 }

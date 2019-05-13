@@ -58,9 +58,6 @@ public class QuestManager : MonoBehaviour {
 	}
 
 	public bool Checkpoint () {
-		Debug.Log((this.activeQuest.maxTime * (this.activeQuest.objective.checkpoint.percentTimeAdd/100)));
-		Debug.Log((activeQuest.maxTime * (timer/activeQuest.maxTime)));
-		
 		this.timer += (this.activeQuest.maxTime * (this.activeQuest.objective.checkpoint.percentTimeAdd/100))/* + (activeQuest.maxTime * (timer/activeQuest.maxTime))*/;
 		//ChangeTarget(activeQuest.objective.checkpoint.transform);
 		PlaySound(SoundType.Check);
@@ -84,6 +81,16 @@ public class QuestManager : MonoBehaviour {
 		PlaySound(SoundType.End);
 	}
 
+	public void LoseQuest() {
+		this.activeQuest.QuestStatusChanged(QuestStatus.READY);
+		ReadyAllQuests();
+		ChangeTarget(null);
+		FindNearestQuest.nearestQuest.StartSearch();
+		this.activeQuest = null;
+		this.status = PlayerQuestStatus.SEARCHING;
+		this.GetComponentInChildren<ObjectifSound>().Reset();
+	}
+
 	protected void Update() {
 		if (this.status == PlayerQuestStatus.INQUEST) {
 			if (Manager.player.position.IsCloseEnoughTo(this.activeQuest.objective.position, this.activeQuest.objective.validationRange) && this.hasColis) {
@@ -99,9 +106,7 @@ public class QuestManager : MonoBehaviour {
 			foreach (var item in times)
 				item.text = FloatToTime(this.timer);
 			if (this.timer <= 0) {
-				this.activeQuest.ObjectiveReset();
-				this.activeQuest.QuestStatusChanged(QuestStatus.READY);
-				this.activeQuest = null;
+				LoseQuest();
 			}
 		} else
 			if (timer != 0) {

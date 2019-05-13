@@ -32,4 +32,11 @@ public class ObjectifSound : MonoBehaviour {
 	public void EndQuest() {
 		this.sound.setParameterValue("objectif", 1);
 	}
+	
+	public void Reset() {
+		this.sound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+		this.sound = RuntimeManager.CreateInstance(Manager.parameters.soundParameters.objectif_manager);
+		RuntimeManager.AttachInstanceToGameObject(this.sound, this.transform, Manager.player);
+		this.sound.start();
+	}
 }

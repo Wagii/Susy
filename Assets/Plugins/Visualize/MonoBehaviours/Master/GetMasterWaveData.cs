@@ -1,0 +1,63 @@
+﻿using UnityEngine;
+
+/// <summary>
+/// This script serves to get the wave Data (volume per frequence)
+/// Logic is :
+/// Start by validating the existence of your sound source
+/// Create the WaveData reader
+/// Each frame, read the sound data and set it in 'data'
+/// </summary>
+
+public class GetMasterWaveData : DataGetter {
+	
+	// Number of slices. In this parameter, you will slice the 20 000 audible frequences in 512 floats
+	public new int FFTWindowSize = 512;
+	
+	// Check this out if you want to understand : https://en.wikipedia.org/wiki/Window_function
+	public new FMOD.DSP_FFT_WINDOW dataType = FMOD.DSP_FFT_WINDOW.RECT;
+	
+	// This is the main output of this script
+	public new float[][] data = new float[0][];
+	
+	
+	private bool canStartVisualize = false;
+	private FMOD.DSP fft;
+	
+	private Coroutine waitForMasterInitializationRoutine = null, visualizeUpdate = null;
+	
+	protected void Awake() {
+		if ((FFTWindowSize != 0) && ((FFTWindowSize & (FFTWindowSize - 1)) != 0)) {
+			Debug.LogError("Warning : FFTWindowSize must be a power of Two");
+			return;
+		}
+		this.waitForMasterInitializationRoutine = StartCoroutine(WaitForInstanceInitialization());
+		this.visualizeUpdate = StartCoroutine(VisualizeUpdate());
+	}
+	
+	public void ResetInstance() {
+		StopCoroutine(visualizeUpdate);
+		StopCoroutine(waitForMasterInitializationRoutine);
+		this.waitForMasterInitializationRoutine = StartCoroutine(WaitForInstanceInitialization());
+		this.visualizeUpdate = StartCoroutine(VisualizeUpdate());
+	}
+	
+	private System.Collections.IEnumerator WaitForInstanceInitialization() {
+		Pointer<bool> ptr = new Pointer<bool>();
+		FMODGetSpectrum.CreateFFTDSP(this.dataType, FFTWindowSize, out fft);
+		StartCoroutine(FMODGetSpectrum.CheckMasterInstantiated(ptr));
+		while (ptr.data != true) {
+			yield return null;
+		}
+		FMODGetSpectrum.StartVisualizeMaster(fft);
+		this.canStartVisualize = true;
+	}
+	
+	private System.Collections.IEnumerator VisualizeUpdate() {
+		while (canStartVisualize != true) yield return null;
+		
+		while (true) {
+			this.fft.GetParameterData(out data);
+			yield return null;
+		}
+	}
+}
