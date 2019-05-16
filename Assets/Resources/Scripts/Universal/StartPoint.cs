@@ -26,6 +26,8 @@ public class StartPoint : MonoBehaviour
 	[ColorUsageAttribute(true,true)]public Color disabledColor;
 	[ColorUsageAttribute(true,true)]public Color completeColor;
 	
+	private TourneQ exclamation = null;
+	
 	protected void Start() {
 		maxTime = (maxTime == 0)? 0.001f : maxTime;
 		if (this.checkpoints.Count == 0) {
@@ -39,12 +41,14 @@ public class StartPoint : MonoBehaviour
 		
 		this.rd = GetComponent<Renderer>();
 		this.rd.materials[0].SetColor(SHADERFRESNELCOLOR, (status == QuestStatus.ACTIVE? activeColor : status== QuestStatus.COMPLETE? completeColor : status == QuestStatus.DISABLED? disabledColor : readyColor));
+		
 	}
 	
 	public void QuestStatusChanged (QuestStatus status) {
 		this.status = status;
 		
 		this.rd = GetComponent<Renderer>();
+		this.exclamation = GetComponentInChildren<TourneQ>();
 		
 		switch (status) {
 		case QuestStatus.ACTIVE:
@@ -53,6 +57,8 @@ public class StartPoint : MonoBehaviour
 			this.objective.number = 0;
 			
 			this.rd.materials[0].SetColor(SHADERFRESNELCOLOR, this.activeColor);
+			if (this.exclamation != null)
+			this.exclamation.Matte();
 			
 			break;
 			
@@ -61,6 +67,10 @@ public class StartPoint : MonoBehaviour
 			this.objective = new Next();
 			
 			this.rd.materials[0].SetColor(SHADERFRESNELCOLOR, this.completeColor);
+			if (this.exclamation != null) {
+				this.exclamation.Stroy();
+				this.exclamation = null;
+			}
 			
 			this.enabled = false;
 			break;
@@ -69,6 +79,8 @@ public class StartPoint : MonoBehaviour
 			this.startCollider.enabled = false;
 			
 			this.rd.materials[0].SetColor(SHADERFRESNELCOLOR, this.disabledColor);
+			if (this.exclamation != null)
+			this.exclamation.No();
 			
 			break;
 			
@@ -76,6 +88,8 @@ public class StartPoint : MonoBehaviour
 			this.startCollider.enabled = true;
 			
 			this.rd.materials[0].SetColor(SHADERFRESNELCOLOR, this.readyColor);
+			if (this.exclamation != null)
+			this.exclamation.Yes();
 			
 			break;
 			
