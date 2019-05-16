@@ -93,7 +93,8 @@ public class QuestManager : MonoBehaviour {
 
 	protected void Update() {
 		if (this.status == PlayerQuestStatus.INQUEST) {
-			if (Manager.player.position.IsCloseEnoughTo(this.activeQuest.objective.position, this.activeQuest.objective.validationRange) && this.hasColis) {
+			if (Manager.player.transform.position.IsCloseEnoughTo(this.activeQuest.objective.position, this.activeQuest.objective.validationRange) && this.hasColis) {
+				Debug.Log((this.activeQuest.objective.position - Manager.player.position).magnitude);
 				if (Checkpoint()) {
 					EndQuest();
 					return;
