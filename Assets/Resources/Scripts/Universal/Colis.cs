@@ -9,12 +9,14 @@ public class Colis : MonoBehaviour {
 	private StickAtPosition stick = null;
 	private GameObjectEntity entity = null;
 	[SerializeField] private GameObject modelLeft = null, modelRight = null;
+	private LoseColisSound sound = null;
 	
 	protected void Start() {
 		this.rb = GetComponent<Rigidbody>();
 		this.slower = GetComponent<Slower>();
 		this.stick = GetComponent<StickAtPosition>();
 		this.entity = GetComponent<GameObjectEntity>();
+		this.sound = GetComponent<LoseColisSound>();
 		Take();
 	}
 
@@ -38,6 +40,9 @@ public class Colis : MonoBehaviour {
 		
 		this.modelLeft.SetActive(false);
 		this.modelRight.SetActive(false);
+		
+		this.sound.StopSound();
+		ObjectifSound.objSound.GetColis();
 	}
 
 
@@ -58,6 +63,9 @@ public class Colis : MonoBehaviour {
 
 		this.modelLeft.SetActive(true);
 		this.modelRight.SetActive(true);
+
+		this.sound.StartSound();
+		Manager.player.GetComponent<CollisionJoueur>().PlayLose();
 
 		StartCoroutine(SetTakeableAfterTime(this.timeBeforeTakeable));
 	}

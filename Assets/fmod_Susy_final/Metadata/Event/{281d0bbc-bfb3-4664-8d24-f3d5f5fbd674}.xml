@@ -60,7 +60,7 @@
     <object class="MarkerTrack" id="{7f685c14-09ac-49a6-b89b-3d440dfedfff}"/>
     <object class="GroupTrack" id="{e9f06f78-6e5a-4b39-85e6-22c1183abb0e}">
         <relationship name="modules">
-            <destination>{27fad479-5227-480b-9e43-eb8825ad11ee}</destination>
+            <destination>{faf83724-964d-40f6-af59-c8882390c2dd}</destination>
         </relationship>
         <relationship name="mixerGroup">
             <destination>{29fc772d-406d-498b-ad24-e4ef1fbadb4f}</destination>
@@ -68,7 +68,7 @@
     </object>
     <object class="Timeline" id="{c8fc1c24-be4a-4e0e-85dc-127e3f46a702}">
         <relationship name="modules">
-            <destination>{27fad479-5227-480b-9e43-eb8825ad11ee}</destination>
+            <destination>{faf83724-964d-40f6-af59-c8882390c2dd}</destination>
         </relationship>
         <relationship name="markers">
             <destination>{2a987f73-d38c-4500-87d1-af86a17f64a3}</destination>
@@ -91,9 +91,18 @@
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{29fa0b3f-9552-4aaf-bd1c-7deb026efb72}"/>
-    <object class="SingleSound" id="{27fad479-5227-480b-9e43-eb8825ad11ee}">
+    <object class="SingleSound" id="{faf83724-964d-40f6-af59-c8882390c2dd}">
+        <property name="isAsync">
+            <value>true</value>
+        </property>
+        <property name="start">
+            <value>0.20000000000000001</value>
+        </property>
         <property name="length">
-            <value>3.430748299319728</value>
+            <value>2</value>
+        </property>
+        <property name="looping">
+            <value>true</value>
         </property>
         <relationship name="audioFile">
             <destination>{0164883a-1b51-41f5-86b7-d59061705570}</destination>
@@ -101,7 +110,7 @@
     </object>
     <object class="EventMixerGroup" id="{29fc772d-406d-498b-ad24-e4ef1fbadb4f}">
         <property name="volume">
-            <value>10</value>
+            <value>-3</value>
         </property>
         <property name="name">
             <value>Audio 1</value>
@@ -118,7 +127,7 @@
     </object>
     <object class="LoopRegion" id="{2a987f73-d38c-4500-87d1-af86a17f64a3}">
         <property name="position">
-            <value>0</value>
+            <value>0.20000000000000001</value>
         </property>
         <property name="length">
             <value>2</value>
@@ -209,7 +218,7 @@
             <value>LinearPiecewiseCurveStrategy{(0.000000,0.000000)(2.000000,1.000000)(5.000000,5.000000)(10.000000,10.000000)(15.000000,100.000000)(20.000000,1000.000000)(27.000000,10000.000000)}</value>
         </property>
         <property name="value">
-            <value>500</value>
+            <value>1500</value>
         </property>
     </object>
     <object class="IntPluginParameter" id="{40de8978-7b5c-4ee9-bca9-aa309645b25b}">
@@ -266,7 +275,6 @@
         <property name="dataType">
             <value>-2</value>
         </property>
-        <property name="value"/>
     </object>
     <object class="BoolPluginParameter" id="{8cbc5fdc-3bb4-49d7-977e-bee211a0db8e}">
         <property name="name">

@@ -16,10 +16,15 @@ public class QuestManager : MonoBehaviour {
 
 	private List<StartPoint> quests = new List<StartPoint>();
 	private PlayerQuestStatus status = PlayerQuestStatus.SEARCHING;
-	private float timer = 0;
-	private int score = 0;
+	public float timer = 0; // Now public
+	public int score = 0; // Now public
 	
+	public bool moreThanTen = false;
 	public bool hasColis = true;
+	
+	public TextFading[] gainPrompt;
+	public int lastScoreGain { get; private set; }
+	public float lastTimeGain { get; private set; }
 	
 	[SerializeField] private List<Text> times = null;
 	[SerializeField] private List<Text> scores = null;
@@ -55,22 +60,37 @@ public class QuestManager : MonoBehaviour {
 		DisableButOneQuest(quest);
 		ChangeTarget(quest.objective.checkpoint.transform);
 		PlaySound(SoundType.Start);
+		if (quest.maxTime > 10f)
+			moreThanTen = true;
 	}
 
 	public bool Checkpoint () {
-		this.timer += (this.activeQuest.maxTime * (this.activeQuest.objective.checkpoint.percentTimeAdd/100))/* + (activeQuest.maxTime * (timer/activeQuest.maxTime))*/;
-		//ChangeTarget(activeQuest.objective.checkpoint.transform);
+		this.lastTimeGain = (this.activeQuest.maxTime * (this.activeQuest.objective.checkpoint.percentTimeAdd/100));
+		this.timer += this.lastTimeGain;
+		
+		foreach (var prompt in this.gainPrompt) {
+			prompt.gameObject.SetActive(true);
+			prompt.PingReward(time: true);
+		}
+		
+		if (this.timer > 10f)
+			moreThanTen = true;
 		PlaySound(SoundType.Check);
 		return this.activeQuest.Check();
 	}
 
 	public void EndQuest () {
 		Status = PlayerQuestStatus.SEARCHING;
-		score += (int)(activeQuest.score + (activeQuest.score * (this.timer/this.activeQuest.maxTime)));
+		this.lastScoreGain = (int)(activeQuest.score + (activeQuest.score * (this.timer/this.activeQuest.maxTime)));
+		score += this.lastScoreGain;
 		
+		foreach (var prompt in this.gainPrompt) {
+			prompt.gameObject.SetActive(true);
+			prompt.PingReward(money: true);
+		}
 		
 		foreach (var item in scores)
-			item.text = this.score.ToString() + "$";
+			item.text = this.score.ToString() + "u";
 		
 		
 		this.activeQuest.QuestStatusChanged(QuestStatus.COMPLETE);
@@ -86,15 +106,18 @@ public class QuestManager : MonoBehaviour {
 		ReadyAllQuests();
 		ChangeTarget(null);
 		FindNearestQuest.nearestQuest.StartSearch();
+		
 		this.activeQuest = null;
 		this.status = PlayerQuestStatus.SEARCHING;
+		
+		ObjectifSound.objSound.Lose();
+		
 		this.GetComponentInChildren<ObjectifSound>().Reset();
 	}
 
 	protected void Update() {
 		if (this.status == PlayerQuestStatus.INQUEST) {
 			if (Manager.player.transform.position.IsCloseEnoughTo(this.activeQuest.objective.position, this.activeQuest.objective.validationRange) && this.hasColis) {
-				Debug.Log((this.activeQuest.objective.position - Manager.player.position).magnitude);
 				if (Checkpoint()) {
 					EndQuest();
 					return;
@@ -104,6 +127,10 @@ public class QuestManager : MonoBehaviour {
 			}
 
 			this.timer -= Time.deltaTime;
+			if (moreThanTen && this.timer <= 10f) {
+				moreThanTen = false;
+				TenSeconds.tensecs.Play();
+			}
 			foreach (var item in times)
 				item.text = FloatToTime(this.timer);
 			if (this.timer <= 0) {
@@ -113,7 +140,7 @@ public class QuestManager : MonoBehaviour {
 			if (timer != 0) {
 				timer = 0;
 				foreach (var item in times)
-					item.text = "00:00";
+					item.text = "--:--";
 			}
 	}
 	
@@ -124,7 +151,8 @@ public class QuestManager : MonoBehaviour {
 	private enum SoundType {
 		Start,
 		Check,
-		End
+		End,
+		Lost
 	};
 	
 	private ObjectifSound objSound { get { return ObjectifSound.objSound; } }
@@ -142,6 +170,10 @@ public class QuestManager : MonoBehaviour {
 				
 		case SoundType.End:
 			objSound.EndQuest();
+			break;
+				
+		case SoundType.Lost:
+			objSound.LostColis();
 			break;
 				
 		default:

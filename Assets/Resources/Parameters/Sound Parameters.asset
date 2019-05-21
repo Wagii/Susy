@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86b913afe08755c4a8c3df018994879e, type: 3}
   m_Name: Sound Parameters
   m_EditorClassIdentifier: 
-  minimumCollisionForce: 0
-  player_collision_sound: event:/Joueur/collision_joueur
-  playerCollisionVolumeDivider: 25
+  minimumCollisionForce: 50
+  player_collision_sound: event:/Objets/collision_objet
+  playerCollisionVolumeDivider: 200
   object_collision_sound: event:/Objets/collision_objet
   objectCollisionVolume: 1
+  sillageSound: event:/Objets/aspire
   player_acceleration_sound: event:/Joueur/propulsion
-  playerMinimumAcceleration: 1
-  playerAccelerationVolumeDivider: 25
+  playerMinimumAcceleration: 100
+  playerAccelerationVolumeDivider: 500
   objectif_manager: event:/Bras/objectifs
   dist:
     serializedVersion: 2
@@ -45,4 +46,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  tenSeconds: event:/Bras/10s
+  loseQuest: event:/Quetes/quete_perdue
   ambiance1: event:/Musique/manager
+  loseColis: event:/Bras/lose_colis
+  loseColisAlarm: event:/Bras/alarm

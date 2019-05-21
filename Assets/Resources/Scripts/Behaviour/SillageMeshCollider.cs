@@ -42,9 +42,11 @@ public class SillageMeshCollider : MonoBehaviour
 	private void OnTriggerEnter(Collider other)
 	{
 		Rigidbody rb = other.GetComponent<Rigidbody>();
-		if (rb == null) return;
+		Slower sl = other.GetComponent<Slower>();
+		if (rb == null || sl == null) return;
 		
 		//rb.AddForce(((this.transform.position - rb.position).normalized * Manager.player.velocity.magnitude * this.objectSpeedMultiplier) - Manager.player.velocity.normalized, ForceMode.Impulse);
 		rb.velocity += ((this.transform.position - rb.position).normalized * Manager.player.velocity.magnitude * this.objectSpeedMultiplier) - Manager.player.velocity.normalized;
+		other.gameObject.AddComponent<ItemSillageSound>();
 	}
 }

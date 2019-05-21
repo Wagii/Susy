@@ -134,6 +134,9 @@
         </relationship>
     </object>
     <object class="EventMixerMaster" id="{3ed9acec-9301-493b-877d-fe30bcdb0370}">
+        <property name="volume">
+            <value>-8.5</value>
+        </property>
         <relationship name="effectChain">
             <destination>{ebe3c77f-55dc-4436-9e98-fb908fdb25f1}</destination>
         </relationship>
@@ -250,7 +253,7 @@
     </object>
     <object class="EventMixerGroup" id="{3ac28869-94cf-449e-87b0-7a74fe02ac09}">
         <property name="volume">
-            <value>-1</value>
+            <value>6</value>
         </property>
         <property name="name">
             <value>percution</value>
@@ -371,7 +374,7 @@
             <value>1</value>
         </property>
         <property name="value">
-            <value>0</value>
+            <value>10</value>
         </property>
     </object>
     <object class="AutomationPoint" id="{e9a6cc9f-fefb-4d09-a2e6-1ac7bb74c879}">
@@ -379,7 +382,7 @@
             <value>0</value>
         </property>
         <property name="value">
-            <value>-80</value>
+            <value>-40</value>
         </property>
     </object>
     <object class="AutomationPoint" id="{8aa9570f-f421-4868-82d3-cc82671ddd67}">
@@ -403,7 +406,7 @@
             <value>0</value>
         </property>
         <property name="value">
-            <value>-80</value>
+            <value>-66.6666641</value>
         </property>
     </object>
     <object class="AutomationPoint" id="{7053471d-8172-4ecf-8f92-8f92d39cb27a}">
@@ -411,7 +414,7 @@
             <value>0.99997916666666664</value>
         </property>
         <property name="value">
-            <value>-10</value>
+            <value>-9</value>
         </property>
     </object>
 </objects>

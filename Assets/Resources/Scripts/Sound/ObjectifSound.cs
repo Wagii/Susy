@@ -4,11 +4,14 @@ using FMODUnity;
 public class ObjectifSound : MonoBehaviour {
 	public static ObjectifSound objSound;
 	private FMOD.Studio.EventInstance sound;
+	private FMOD.Studio.EventInstance lost;
 	
 	protected void Start() {
 		ObjectifSound.objSound = this;
 		this.sound = RuntimeManager.CreateInstance(Manager.parameters.soundParameters.objectif_manager);
 		RuntimeManager.AttachInstanceToGameObject(this.sound, this.transform, Manager.player);
+		this.lost = RuntimeManager.CreateInstance(Manager.parameters.soundParameters.loseQuest);
+		RuntimeManager.AttachInstanceToGameObject(this.lost, this.transform, Manager.player);
 		this.sound.start();
 	}
 	
@@ -31,6 +34,18 @@ public class ObjectifSound : MonoBehaviour {
 	
 	public void EndQuest() {
 		this.sound.setParameterValue("objectif", 1);
+	}
+	
+	public void LostColis() {
+		this.sound.setParameterValue("lost", 1);
+	}
+	
+	public void GetColis() {
+		this.sound.setParameterValue("lost", 0);
+	}
+	
+	public void Lose() {
+		this.lost.start();
 	}
 	
 	public void Reset() {

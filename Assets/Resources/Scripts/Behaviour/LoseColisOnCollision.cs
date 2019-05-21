@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LoseColisOnCollision : MonoBehaviour
 {
 	[SerializeField] private Colis colis = null;
-	[SerializeField] private float minimumSpeedToLoseColis = 500f;
+	[SerializeField] public float minimumSpeedToLoseColis = 500f;
 	
 	[SerializeField] private Image imgLeft = null, imgRight = null;
 	
@@ -25,6 +25,7 @@ public class LoseColisOnCollision : MonoBehaviour
 	protected void OnCollisionEnter(Collision collisionInfo) {
 		if (collisionInfo.relativeVelocity.magnitude >= minimumSpeedToLoseColis) {
 			this.colis.Drop(collisionInfo);
+			ObjectifSound.objSound.LostColis();
 		}
 	}
 }

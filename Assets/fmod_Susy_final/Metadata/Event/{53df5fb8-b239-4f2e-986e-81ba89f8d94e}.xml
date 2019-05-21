@@ -107,6 +107,9 @@
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{26a5e230-fe8a-42f3-b0a5-7719920cdd39}">
+        <property name="volume">
+            <value>10</value>
+        </property>
         <property name="name">
             <value>Audio 1</value>
         </property>
@@ -224,7 +227,7 @@
             <value>LinearPiecewiseCurveStrategy{(0.000000,0.000000)(2.000000,1.000000)(5.000000,5.000000)(10.000000,10.000000)(15.000000,100.000000)(20.000000,1000.000000)(27.000000,10000.000000)}</value>
         </property>
         <property name="value">
-            <value>500</value>
+            <value>10000</value>
         </property>
     </object>
     <object class="IntPluginParameter" id="{eef5f1ae-f271-4a87-a92e-d3e7e0e73cb4}">
@@ -238,7 +241,7 @@
             <value>4</value>
         </property>
         <property name="value">
-            <value>3</value>
+            <value>2</value>
         </property>
     </object>
     <object class="FloatPluginParameter" id="{3f796ee7-23fc-4a13-8f34-f3d8e66ae4e2}">
